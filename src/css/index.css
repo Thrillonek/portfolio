@@ -11,7 +11,7 @@
 
 	--black: 0, 0%, 15%;
 	--white: 0, 0%, 90%;
-	--accent: 270, 100%, 50%;
+	--accent: 265, 100%, 50%;
 
 	color-scheme: light dark;
 	color: hsl(var(--white));

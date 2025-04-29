@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
+import '../css/Home.css';
 
 function Home() {
 	return (
 		<div className='template'>
-			<h1>Welcome to my portfolio</h1>
-			<p>This is a basic React template.</p>
+			<div className='flex justify-center items-center h-full center-glow'>
+				<h1>Jindřich Kraina</h1>
+			</div>
 		</div>
 	);
 }

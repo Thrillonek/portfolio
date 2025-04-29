@@ -9,9 +9,16 @@ nav {
 
 .template {
 	padding: 1rem 1.5rem;
+	overflow-x: hidden;
+	flex-grow: 1;
 }
 
 .serif {
 	font-family: 'Libre Bodoni', serif;
 	font-style: italic;
+}
+
+.glow {
+	box-shadow: 0 0 1.5rem 2rem hsl(270 70% 40%/0.2);
+	position: absolute;
 }

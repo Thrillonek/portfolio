@@ -9,13 +9,13 @@
 	line-height: 1.5;
 	font-weight: 400;
 
-	--black: hsl(0, 0%, 15%);
-	--white: hsl(0, 0%, 90%);
-	--accent: hsl(160, 100%, 50%);
+	--black: 0, 0%, 15%;
+	--white: 0, 0%, 90%;
+	--accent: 270, 100%, 50%;
 
 	color-scheme: light dark;
-	color: var(--white);
-	background-color: var(--black);
+	color: hsl(var(--white));
+	background-color: hsl(var(--black));
 
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
@@ -26,7 +26,7 @@
 body {
 	margin: 0;
 	min-width: 320px;
-	min-height: 100vh;
+	/* min-height: 100vh; */
 }
 
 h1 {

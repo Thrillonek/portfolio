@@ -1,0 +1,3 @@
+.center-glow {
+	background: radial-gradient(circle at center, hsla(var(--accent), 0.1), transparent 50%);
+}

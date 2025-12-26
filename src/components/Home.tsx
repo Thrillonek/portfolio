@@ -1,4 +1,4 @@
-import 'src/assets/Home.css';
+import 'src/assets/Home.scss';
 
 function Home() {
 	return (

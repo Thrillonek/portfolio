@@ -17,7 +17,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang='en' className={`${inter.className} h-full antialiased`}>
+		<html lang='en' className={`${inter.className} h-full antialiased scroll-smooth scroll-pt-8`}>
 			<body className='flex flex-col min-h-full'>{children}</body>
 		</html>
 	);

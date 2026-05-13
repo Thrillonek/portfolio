@@ -3,7 +3,7 @@
 :root {
 	--black: oklch(0.1797 0.0043 308.19);
 	--darker: oklch(0.2115 0.006 301.03);
-	--dark: oklch(0.2398 0.0117 300.71);
+	--dark: oklch(0.25 0.0117 300.71);
 	--gray: oklch(0.3963 0.0251 285.2);
 	--light-gray: oklch(1 0 300.71 / 0.75);
 	--white: oklch(1 0 300.71 / 0.9);
@@ -54,7 +54,21 @@
 
 	section {
 		width: min(90vw, 1500px);
+		display: flex;
+		flex-direction: column;
+		row-gap: 1rem;
+		padding: 1rem 0;
 	}
+}
+
+@utility layout-col-* {
+	display: flex;
+	flex-direction: column;
+	row-gap: calc(--value(integer) * 0.25rem);
+}
+
+@utility glow-* {
+	box-shadow: 0 0 calc(--value(integer) * 0.25rem) var(--tw-shadow-color);
 }
 
 @media (prefers-color-scheme: light) {

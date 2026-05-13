@@ -6,7 +6,7 @@ import './base.scss';
 export default function Home() {
 	return (
 		<main className='flex flex-col flex-1 items-center gap-4 bg-black py-4 text-white'>
-			<section className='flex flex-col items-center gap-4 py-4 w-[min(90vw,800px)]'>
+			<section className='items-center w-[min(90vw,800px)]'>
 				<h1 className='text-center'>Jindřich Kraina</h1>
 				<div className='bg-accent rounded w-12 h-1' />
 				<h4 className='text-center'>Full stack developer & UI/UX designer</h4>
@@ -24,6 +24,75 @@ export default function Home() {
 					</Link>
 				</div>
 			</section>
+			<section>
+				<h2>About me</h2>
+				<div className='gap-8 grid lg:grid-cols-2'>
+					<div className='layout-col-4'>
+						<p>I’m a self-taught web developer and designer, currently studying at Gymnázium Komenského Havířov. In the future, I want to go to VŠB College in Ostrava to study IT. I enjoy solving problems and learning things I find interesting (not only IT and math).</p>
+						<p>I started as a developer, but had to learn design along the way because my projects looked crappy. I also learned the hard way that I need to organize my stuff. Because otherwise, you spend a lot of time just figuring out what’s happening in the codebase. And in design, I found out UX should always come in the first place. Sure, you can get creative, but there are rules you cannot bend, because users are just used to something and will bounce once they get confused.</p>
+						<div className='flex gap-2'>
+							<div className='p-4 rounded-2xl bg-accent-muted layout-col-2'>
+								<h3 className='text-accent'>3+</h3>
+								<p>Years of experience</p>
+							</div>
+							<div className='p-4 rounded-2xl bg-accent-muted layout-col-2'>
+								<h3 className='text-accent'>2</h3>
+								<p>Large projects</p>
+							</div>
+						</div>
+						<div className='flex'>
+							<div className='flex items-center gap-2 p-2'>
+								<div className='place-items-center grid rounded-lg h-8 aspect-square bg-accent-muted'>
+									<span className='font-bold text-accent'>C2</span>
+								</div>
+								<div className='layout-col-0'>
+									<p className='font-bold text-white'>Czech</p>
+									<p className='text-xs'>Native</p>
+								</div>
+							</div>
+							<div className='flex items-center gap-2 p-2'>
+								<div className='place-items-center grid rounded-lg h-8 aspect-square bg-accent-muted'>
+									<span className='font-bold text-accent'>C1</span>
+								</div>
+								<div className='layout-col-0'>
+									<p className='font-bold text-white'>English</p>
+									<p className='text-xs'>Fluent</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div className='bg-darker p-8 border border-gray rounded-2xl h-fit layout-col-4'>
+						<h3>My other hobbies</h3>
+						<div className='gap-4 grid 2xl:grid-cols-2'>
+							<HobbyCard title='Calisthenics' description='A cool athletic sport focused on physical exercises using your bodyweight and some bars.' icon='mingcute:barbell-line' />
+							<HobbyCard title='Math' description='I like learning new concepts, going to competitions and training my brain.' icon='mynaui:math-square' />
+							<HobbyCard title='Music' description='I think everyone has this on their list. I still have to include it here, because I listen to music everyday.' icon='mingcute:music-line' />
+							<HobbyCard title='Random skills' description='Cubing, parkour, card tricks, juggling, stretching…' icon='mingcute:flash-line' />
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
+	);
+}
+
+type HobbyCardProps = {
+	title: string;
+	description: string;
+	icon: string;
+};
+
+function HobbyCard({ title, description, icon }: HobbyCardProps) {
+	return (
+		<div className='bg-dark shadow p-4 rounded-lg layout-col-2'>
+			<div className='flex justify-between items-center'>
+				<div className='flex items-center gap-2'>
+					<Icon icon={icon} className='text-accent text-2xl' />
+					<h4>{title}</h4>
+				</div>
+				<Icon icon='mingcute:information-line' className='text-accent text-2xl shrink-0' />
+			</div>
+			<p>{description}</p>
+		</div>
 	);
 }

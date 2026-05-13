@@ -57,3 +57,21 @@ div:has(textarea) {
 	justify-content: center;
 	text-align: center;
 }
+
+.social-link {
+	background-color: var(--accent-muted);
+	color: var(--accent);
+	font-size: 1.25rem;
+	border: 1px solid transparent;
+	display: block;
+	width: 2.5rem;
+	aspect-ratio: 1 / 1;
+	border-radius: 50%;
+
+	display: grid;
+	place-items: center;
+
+	&:hover {
+		border: 1px solid var(--accent);
+	}
+}

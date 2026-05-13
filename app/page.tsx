@@ -138,6 +138,17 @@ export default function Home() {
 					</div>
 					<div className='layout-col-2'>
 						<h4>Contact</h4>
+						<div className='flex gap-2'>
+							<Link href='https://github.com/Thrillonek' className='social-link' target='_blank'>
+								<Icon icon='mingcute:github-line' />
+							</Link>
+							<Link href='https://www.instagram.com/jindra_kraina_/' className='social-link' target='_blank'>
+								<Icon icon='mingcute:instagram-line' />
+							</Link>
+							<Link href='https://www.linkedin.com/in/jind%C5%99ich-kraina-8234b4408/' className='social-link' target='_blank'>
+								<Icon icon='mingcute:linkedin-line' />
+							</Link>
+						</div>
 						<EmailField />
 					</div>
 				</section>

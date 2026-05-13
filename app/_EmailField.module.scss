@@ -14,6 +14,7 @@
 
 	&::after {
 		content: attr(data-tooltip);
+		pointer-events: none;
 		z-index: 10000;
 		position: absolute;
 		top: -2.5rem;

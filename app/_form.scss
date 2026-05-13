@@ -1,0 +1,59 @@
+div:has(input[type='text']),
+div:has(textarea) {
+	--padding: 0.5rem;
+
+	position: relative;
+	display: flex;
+	width: 100%;
+
+	& > label {
+		position: absolute;
+		pointer-events: none;
+		left: calc(var(--padding) * 1.5 + 2px);
+		top: calc(var(--padding) + 2px + 4px); // 2px is border width, 4px is line height difference
+		color: oklch(from var(--light-gray) calc(l - 0.3) c h);
+		line-height: 1;
+
+		transition-property: color, transform, top, font-size, padding, background-color;
+		transition-duration: 0.2s;
+		transition-timing-function: ease;
+	}
+
+	& > input,
+	& > textarea {
+		flex: 1;
+		padding: var(--padding) calc(var(--padding) * 1.5);
+		background-color: var(--dark);
+		border: 2px solid var(--dark);
+		border-radius: 0.5rem;
+		color: var(--white);
+		outline: 1px solid transparent !important;
+		line-height: 1.5;
+
+		transition:
+			background-color 0.2s ease,
+			border-color 0.2s ease;
+
+		&:focus {
+			background-color: transparent;
+			border-color: var(--accent);
+
+			& + label {
+				color: var(--accent);
+				top: 0;
+				font-size: 0.75rem;
+				transform: translateY(-50%);
+				background-color: var(--darker);
+				padding: 0 0.25rem;
+			}
+		}
+	}
+}
+
+.form-button {
+	width: 100%;
+	border-radius: 0.5rem !important;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}

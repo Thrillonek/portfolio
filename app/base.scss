@@ -1,0 +1,27 @@
+.button {
+	background-color: var(--accent);
+	color: var(--white);
+	padding: 1rem 1.5rem;
+	display: block;
+	border-radius: 10rem;
+	line-height: 1.1;
+	border: 2px solid var(--accent);
+
+	transition:
+		background-color 0.3s ease,
+		border-color 0.3s ease;
+
+	&:hover {
+		background-color: oklch(from var(--accent) calc(l + 0.07) c h);
+		border-color: oklch(from var(--accent) calc(l + 0.07) c h);
+	}
+
+	&.secondary {
+		background-color: transparent;
+
+		&:hover {
+			background-color: var(--accent);
+			border-color: var(--accent);
+		}
+	}
+}

@@ -114,7 +114,7 @@ export default function Home() {
 					</form>
 				</section>
 			</main>
-			<footer className='items-center bg-darker shadow-2xl py-16 text-white layout-col-0'>
+			<footer className='items-center bg-darker shadow-2xl text-white layout-col-0'>
 				<section className='grid grid-cols-3'>
 					<div className='layout-col-2'>
 						<Image src={iconSvg} width={64} alt='Jindřich Kraina' />
@@ -152,6 +152,10 @@ export default function Home() {
 						<EmailField />
 					</div>
 				</section>
+				<div className='bg-dark w-full h-px' />
+				<div className='p-4 text-sm text-center'>
+					<p className='text-neutral-400!'>&copy; {new Date().getFullYear()} Jindřich Kraina. All rights reserved.</p>
+				</div>
 			</footer>
 		</>
 	);

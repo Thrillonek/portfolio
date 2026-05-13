@@ -13,7 +13,7 @@ import { ProjectCard } from './ProjectCard';
 export default function Home() {
 	return (
 		<>
-			<main className='flex flex-col flex-1 items-center gap-4 bg-black py-4 text-white'>
+			<main className='flex flex-col flex-1 items-center gap-16 bg-black py-4 text-white'>
 				<section className='items-center w-[min(90vw,800px)]'>
 					<h1 className='text-center'>Jindřich Kraina</h1>
 					<div className='bg-accent rounded w-12 h-1' />
@@ -121,22 +121,22 @@ export default function Home() {
 						<h3>Jindřich Kraina</h3>
 						<p>Full-stack developer & UI/UX designer</p>
 					</div>
-					<div className='layout-col-2'>
+					<div className='text-light-gray layout-col-2'>
 						<h4>Navigation</h4>
-						<Link className='hover:underline' href='#about'>
+						<Link className='w-fit hover:underline' href='#about'>
 							About me
 						</Link>
-						<Link className='hover:underline' href='#tech-stack'>
+						<Link className='w-fit hover:underline' href='#tech-stack'>
 							Tech stack
 						</Link>
-						<Link className='hover:underline' href='#projects'>
+						<Link className='w-fit hover:underline' href='#projects'>
 							Projects
 						</Link>
-						<Link className='hover:underline' href='#contact'>
+						<Link className='w-fit hover:underline' href='#contact'>
 							Contact
 						</Link>
 					</div>
-					<div className='layout-col-2'>
+					<div className='layout-col-4'>
 						<h4>Contact</h4>
 						<div className='flex gap-2'>
 							<Link href='https://github.com/Thrillonek' className='social-link' target='_blank'>

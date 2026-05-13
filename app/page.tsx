@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import './_base.scss';
 import './_form.scss';
+import EmailField from './EmailField';
 import HobbyCard from './HobbyCard';
 import iconSvg from './icon.svg';
 import { ProjectCard } from './ProjectCard';
@@ -93,6 +94,7 @@ export default function Home() {
 				<section id='contact' className='items-center'>
 					<h2 className='text-center'>Contact</h2>
 					<p>Want to work with me? Just fill out this form and I'll get back to you as soon as possible. Or you can write me an email.</p>
+					<EmailField />
 					<form className='items-center bg-darker shadow-xl p-8 rounded-2xl w-[min(480px,100%)] layout-col-4' action=''>
 						<div>
 							<input type='text' placeholder=' ' id='name' />
@@ -136,7 +138,7 @@ export default function Home() {
 					</div>
 					<div className='layout-col-2'>
 						<h4>Contact</h4>
-						<p>Email: jindrich.kraina@gmail.com</p>
+						<EmailField />
 					</div>
 				</section>
 			</footer>

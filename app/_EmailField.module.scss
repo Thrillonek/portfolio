@@ -1,0 +1,38 @@
+.emailField {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0.5rem 1rem;
+	border-radius: 9999px;
+	background-color: var(--accent-muted);
+	color: var(--white);
+	width: fit-content;
+	border: 1px solid transparent;
+	position: relative;
+
+	transition: border 0.2s ease;
+
+	&::after {
+		content: attr(data-tooltip);
+		z-index: 10000;
+		position: absolute;
+		top: -2.5rem;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: var(--dark);
+		color: var(--light-gray);
+		padding: 0.25rem 0.5rem;
+		border: 1px solid var(--gray);
+		border-radius: 0.5rem;
+		opacity: 0;
+
+		transition: opacity 0.1s ease;
+	}
+
+	&:hover {
+		border: 1px solid var(--accent);
+		&::after {
+			opacity: 1;
+		}
+	}
+}

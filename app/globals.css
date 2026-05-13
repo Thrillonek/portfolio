@@ -3,7 +3,7 @@
 :root {
 	--black: oklch(0.1797 0.0043 308.19);
 	--darker: oklch(0.2115 0.006 301.03);
-	--dark: oklch(0.25 0.0117 300.71);
+	--dark: oklch(0.27 0.0117 300.71);
 	--gray: oklch(0.3963 0.0251 285.2);
 	--light-gray: oklch(1 0 300.71 / 0.75);
 	--white: oklch(1 0 300.71 / 0.9);

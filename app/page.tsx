@@ -1,7 +1,10 @@
+import domacnostHrouImage from '@/public/domacnost-hrou.png';
+import poznavackaImage from '@/public/poznavacka.png';
 import { Icon } from '@iconify/react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 import './base.scss';
+import HobbyCard from './HobbyCard';
 
 export default function Home() {
 	return (
@@ -72,27 +75,51 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
+			<section className='items-center'>
+				<h2 className='text-center'>Tech stack</h2>
+				<div className='flex gap-8 p-4 border-gray border-y'></div>
+			</section>
+			<section className='items-center'>
+				<h2 className='text-center'>Projects</h2>
+				<div className='flex gap-4'>
+					<ProjectCard title='Poznávačka tool' description='App that helps students learn the names of animals, plants and other biology stuff.' tags={['TypeScript', 'React', 'Tailwind CSS']} link='https://poznavacka.netlify.app' image={poznavackaImage} />
+					<ProjectCard title='Domácnost hrou' description='A portfolio/e-commerce type website focused on selling my client and a brand they’re working for.' tags={['NextJS', 'React', 'Tailwind CSS', 'PHP']} link='https://domacnosthrou.cz' image={domacnostHrouImage} />
+				</div>
+			</section>
 		</main>
 	);
 }
 
-type HobbyCardProps = {
+type ProjectCardProps = {
 	title: string;
 	description: string;
-	icon: string;
+	image: StaticImageData;
+	tags: string[];
+	link: string;
 };
 
-function HobbyCard({ title, description, icon }: HobbyCardProps) {
+function ProjectCard({ title, description, image, tags, link }: ProjectCardProps) {
 	return (
-		<div className='bg-dark shadow p-4 rounded-lg layout-col-2'>
-			<div className='flex justify-between items-center'>
-				<div className='flex items-center gap-2'>
-					<Icon icon={icon} className='text-accent text-2xl' />
-					<h4>{title}</h4>
-				</div>
-				<Icon icon='mingcute:information-line' className='text-accent text-2xl shrink-0' />
+		<div className='bg-darker p-4 border border-gray rounded-lg w-md max-w-full layout-col-4'>
+			<Image src={image} alt={'Obrázek projektu ' + title} className='rounded-lg w-full h-auto object-contain shrink-0' />
+			<div className='layout-col-1'>
+				<h4>{title}</h4>
+				<p>{description}</p>
 			</div>
-			<p>{description}</p>
+			<div className='flex gap-1'>
+				{tags.map((tag) => (
+					<span key={tag} className='bg-dark shadow px-2 py-1 rounded-full text-light-gray text-xs'>
+						{tag}
+					</span>
+				))}
+			</div>
+			<div className='flex gap-2'>
+				<button className='button'>See more</button>
+				<Link className='button secondary' href={link} target='_blank' rel='noopener noreferrer'>
+					<span>Go to the page</span>
+					<Icon icon='mingcute:external-link-line' />
+				</Link>
+			</div>
 		</div>
 	);
 }

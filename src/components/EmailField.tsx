@@ -1,8 +1,8 @@
 'use client';
 
+import classes from '@/src/assets/_EmailField.module.scss';
 import { Icon } from '@iconify/react';
 import { useState } from 'react';
-import classes from './_EmailField.module.scss';
 
 const email = 'jindrich.kraina@gmail.com';
 

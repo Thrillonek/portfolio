@@ -1,15 +1,15 @@
 import domacnostHrouImage from '@/public/domacnost-hrou.png';
 import poznavackaImage from '@/public/poznavacka.png';
+import '@/src/assets/_base.scss';
+import '@/src/assets/_form.scss';
+import '@/src/assets/_nav.scss';
 import { Icon } from '@iconify/react';
 import Image from 'next/image';
 import Link from 'next/link';
-import './_base.scss';
-import './_form.scss';
-import './_nav.scss';
-import EmailField from './EmailField';
-import HobbyCard from './HobbyCard';
+import EmailField from '../components/EmailField';
+import HobbyCard from '../components/HobbyCard';
+import { ProjectCard } from '../components/ProjectCard';
 import iconSvg from './icon.svg';
-import { ProjectCard } from './ProjectCard';
 
 export default function Home() {
 	return (
@@ -27,7 +27,7 @@ export default function Home() {
 				</div>
 				<button className='flex items-center gap-1 px-2 py-1 rounded text-white'>
 					<Icon icon='mdi:language' />
-					<span>EN</span>
+					<span className='text-sm'>EN</span>
 				</button>
 			</nav>
 			<main className='flex flex-col flex-1 items-center gap-16 bg-black text-white'>

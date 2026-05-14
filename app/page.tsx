@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import './_base.scss';
 import './_form.scss';
+import './_nav.scss';
 import EmailField from './EmailField';
 import HobbyCard from './HobbyCard';
 import iconSvg from './icon.svg';
@@ -13,8 +14,24 @@ import { ProjectCard } from './ProjectCard';
 export default function Home() {
 	return (
 		<>
-			<main className='flex flex-col flex-1 items-center gap-16 bg-black py-4 text-white'>
-				<section className='items-center w-[min(90vw,800px)]'>
+			<nav>
+				<Link href='#hero' className='flex items-center gap-2'>
+					<Image src={iconSvg} width={32} alt={'Logo'} />
+					<h4>Jindřich Kraina</h4>
+				</Link>
+				<div className='flex gap-4'>
+					<Link href='#about'>About</Link>
+					<Link href='#tech-stack'>Tech stack</Link>
+					<Link href='#projects'>Projects</Link>
+					<Link href='#contact'>Contact</Link>
+				</div>
+				<button className='flex items-center gap-1 px-2 py-1 rounded text-white'>
+					<Icon icon='mdi:language' />
+					<span>EN</span>
+				</button>
+			</nav>
+			<main className='flex flex-col flex-1 items-center gap-16 bg-black text-white'>
+				<section id='hero' className='justify-center items-center pt-40 w-[min(90vw,800px)]'>
 					<h1 className='text-center'>Jindřich Kraina</h1>
 					<div className='bg-accent rounded w-12 h-1' />
 					<h4 className='text-center'>Full-stack developer & UI/UX designer</h4>

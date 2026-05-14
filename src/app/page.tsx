@@ -25,7 +25,7 @@ export default function Home() {
 					<Link href='#projects'>Projects</Link>
 					<Link href='#contact'>Contact</Link>
 				</div>
-				<button className='flex items-center gap-1 px-2 py-1 rounded text-white'>
+				<button className='flex items-center gap-1 px-2 py-1 rounded text-white hover:text-accent transition-colors hover:bg-accent-muted'>
 					<Icon icon='mdi:language' />
 					<span className='text-sm'>EN</span>
 				</button>
@@ -54,7 +54,7 @@ export default function Home() {
 					<div className='gap-8 grid lg:grid-cols-2'>
 						<div className='layout-col-4'>
 							<p>I’m a self-taught web developer and designer, currently studying at Gymnázium Komenského Havířov. In the future, I want to go to VŠB College in Ostrava to study IT. I enjoy solving problems and learning things I find interesting (not only IT and math).</p>
-							<p>I started as a developer, but had to learn design along the way because my projects looked crappy. I also learned the hard way that I need to organize my stuff. Because otherwise, you spend a lot of time just figuring out what’s happening in the codebase. And in design, I found out UX should always come in the first place. Sure, you can get creative, but there are rules you cannot bend, because users are just used to something and will bounce once they get confused.</p>
+							<p>I started as a developer, but had to learn design along the way because my projects looked crappy. I also learned the hard way that I need to organize my stuff. Because otherwise, I would spend a lot of time just figuring out what’s happening in the codebase. And in design, I found out UX should always come in the first place. Sure, you can get creative, but there are rules you cannot bend, because users are just used to something and will bounce once they get confused.</p>
 							<div className='flex gap-2'>
 								<div className='p-4 rounded-2xl bg-accent-muted layout-col-2'>
 									<h3 className='text-accent'>3+</h3>

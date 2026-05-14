@@ -36,6 +36,12 @@
 		font-size: 4rem;
 	}
 
+	@media (max-width: 768px) {
+		h1 {
+			font-size: 3rem;
+		}
+	}
+
 	h2 {
 		font-size: 2rem;
 	}

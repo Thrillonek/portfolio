@@ -8,28 +8,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import EmailField from '../components/EmailField';
 import HobbyCard from '../components/HobbyCard';
+import Navbar from '../components/Navbar';
 import { ProjectCard } from '../components/ProjectCard';
 import iconSvg from './icon.svg';
 
 export default function Home() {
 	return (
 		<>
-			<nav>
-				<Link href='#hero' className='flex items-center gap-2'>
-					<Image src={iconSvg} width={32} alt={'Logo'} />
-					<h4>Jindřich Kraina</h4>
-				</Link>
-				<div className='flex gap-4'>
-					<Link href='#about'>About</Link>
-					<Link href='#tech-stack'>Tech stack</Link>
-					<Link href='#projects'>Projects</Link>
-					<Link href='#contact'>Contact</Link>
-				</div>
-				<button className='flex items-center gap-1 px-2 py-1 rounded text-white hover:text-accent transition-colors hover:bg-accent-muted'>
-					<Icon icon='mdi:language' />
-					<span className='text-sm'>EN</span>
-				</button>
-			</nav>
+			<Navbar />
 			<main className='flex flex-col flex-1 items-center gap-16 bg-black text-white'>
 				<section id='hero' className='justify-center items-center pt-40 w-[min(90vw,800px)]'>
 					<h1 className='text-center'>Jindřich Kraina</h1>

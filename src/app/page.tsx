@@ -26,7 +26,7 @@ export default function Home() {
 						<Icon icon='mingcute:location-fill' className='text-accent text-xl' />
 						<span>Havířov, Czech Republic</span>
 					</p>
-					<div className='flex gap-4'>
+					<div className='flex flex-wrap justify-center gap-4'>
 						<Link className='button' href='#contact'>
 							Contact me
 						</Link>
@@ -89,14 +89,14 @@ export default function Home() {
 				</section>
 				<section id='projects' className='items-center'>
 					<h2 className='text-center'>Projects</h2>
-					<div className='flex flex-wrap gap-4'>
+					<div className='flex flex-wrap justify-center gap-4 w-full'>
 						<ProjectCard title='Poznávačka tool' description='App that helps students learn the names of animals, plants and other biology stuff.' tags={['TypeScript', 'React', 'Tailwind CSS']} link='https://poznavacka.netlify.app' image={poznavackaImage} />
 						<ProjectCard title='Domácnost hrou' description='A portfolio/e-commerce type website focused on selling my client and a brand they’re working for.' tags={['NextJS', 'React', 'Tailwind CSS', 'PHP']} link='https://domacnosthrou.cz' image={domacnostHrouImage} />
 					</div>
 				</section>
 				<section id='contact' className='items-center'>
 					<h2 className='text-center'>Contact</h2>
-					<p>Want to work with me? Just fill out this form and I'll get back to you as soon as possible. Or you can write me an email.</p>
+					<p className='text-center'>Want to work with me? Just fill out this form and I'll get back to you as soon as possible. Or you can write me an email.</p>
 					<EmailField />
 					<form className='items-center bg-darker shadow-xl p-8 rounded-2xl w-[min(480px,100%)] layout-col-4' action=''>
 						<div>
@@ -118,8 +118,8 @@ export default function Home() {
 				</section>
 			</main>
 			<footer className='items-center bg-darker shadow-2xl text-white layout-col-0'>
-				<section className='grid grid-cols-3'>
-					<div className='layout-col-2'>
+				<section className='gap-y-16 grid md:grid-cols-2 lg:grid-cols-3'>
+					<div className='md:col-span-2 lg:col-span-1 layout-col-2'>
 						<Image src={iconSvg} width={64} alt='Jindřich Kraina' />
 						<h3>Jindřich Kraina</h3>
 						<p>Full-stack developer & UI/UX designer</p>

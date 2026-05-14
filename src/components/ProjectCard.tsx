@@ -25,7 +25,7 @@ export function ProjectCard({ title, description, image, tags, link }: ProjectCa
 					</span>
 				))}
 			</div>
-			<div className='flex gap-2'>
+			<div className='flex flex-wrap gap-2'>
 				<button className='button'>See more</button>
 				<Link className='button secondary' href={link} target='_blank' rel='noopener noreferrer'>
 					<span>Go to the page</span>

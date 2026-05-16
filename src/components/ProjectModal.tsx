@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useEffect } from 'react';
 import { projects } from '../data/projects';
 import { useApplicationStore } from '../data/stores';
-import Modal from './Modal';
+import Modal from './ui/Modal';
 
 export default function ProjectModal({ name }: { name: keyof typeof projects }) {
 	const setActiveModal = useApplicationStore((state) => state.setActiveModal);

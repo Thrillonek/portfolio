@@ -3,7 +3,7 @@
 import { Icon } from '@iconify/react';
 import React, { useState } from 'react';
 import { sendEmail } from '../api/sendEmail';
-import Modal from './Modal';
+import Modal from './ui/Modal';
 
 export default function ContactForm() {
 	const [name, setName] = useState('');

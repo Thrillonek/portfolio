@@ -6,6 +6,8 @@ import '@/src/assets/_nav.scss';
 import { Icon } from '@iconify/react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { sendEmail } from '../api/sendEmail';
+import ContactForm from '../components/ContactForm';
 import EmailField from '../components/EmailField';
 import HobbyCard from '../components/HobbyCard';
 import Navbar from '../components/Navbar';
@@ -98,23 +100,7 @@ export default function Home() {
 					<h2 className='text-center'>Contact</h2>
 					<p className='text-center'>Want to work with me? Just fill out this form and I'll get back to you as soon as possible. Or you can write me an email.</p>
 					<EmailField />
-					<form className='items-center bg-darker shadow-xl p-8 rounded-2xl w-[min(480px,100%)] layout-col-4' action=''>
-						<div>
-							<input type='text' placeholder=' ' id='name' />
-							<label htmlFor='name'>Your Name</label>
-						</div>
-						<div>
-							<input type='text' placeholder=' ' id='email' />
-							<label htmlFor='email'>Your Email</label>
-						</div>
-						<div>
-							<textarea placeholder=' ' id='message' rows={4} />
-							<label htmlFor='message'>Your Message</label>
-						</div>
-						<button type='submit' className='form-button button'>
-							Send!
-						</button>
-					</form>
+					<ContactForm />
 				</section>
 			</main>
 			<footer className='items-center bg-darker shadow-2xl text-white layout-col-0'>

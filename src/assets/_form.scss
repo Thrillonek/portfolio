@@ -1,4 +1,5 @@
 div:has(input[type='text']),
+div:has(input[type='email']),
 div:has(textarea) {
 	--padding: 0.5rem;
 
@@ -34,17 +35,28 @@ div:has(textarea) {
 			background-color 0.2s ease,
 			border-color 0.2s ease;
 
-		&:focus {
+		&:focus,
+		&:not(&:placeholder-shown) {
 			background-color: transparent;
-			border-color: var(--accent);
 
 			& + label {
-				color: var(--accent);
 				top: 0;
 				font-size: 0.75rem;
 				transform: translateY(-50%);
 				background-color: var(--darker);
 				padding: 0 0.25rem;
+			}
+		}
+
+		&:not(&:placeholder-shown) {
+			border-color: var(--gray);
+		}
+
+		&:focus {
+			border-color: var(--accent) !important;
+
+			& + label {
+				color: var(--accent);
 			}
 		}
 	}

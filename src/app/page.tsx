@@ -5,8 +5,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 import EmailField from '../components/EmailField';
-import HobbyCard from '../components/HobbyCard';
 import Navbar from '../components/Navbar';
+import OtherHobbies from '../components/OtherHobbies';
 import { ProjectCard } from '../components/ProjectCard';
 import iconSvg from './icon.svg';
 
@@ -70,15 +70,7 @@ export default function Home() {
 								</div>
 							</div>
 						</div>
-						<div className='bg-darker p-8 border border-gray rounded-2xl h-fit layout-col-4'>
-							<h3>My other hobbies</h3>
-							<div className='gap-4 grid 2xl:grid-cols-2'>
-								<HobbyCard title='Calisthenics' description='A cool athletic sport focused on physical exercises using your bodyweight and some bars.' icon='mingcute:barbell-line' />
-								<HobbyCard title='Math' description='I like learning new concepts, going to competitions and training my brain.' icon='mynaui:math-square' />
-								<HobbyCard title='Music' description='I think everyone has this on their list. I still have to include it here, because I listen to music everyday.' icon='mingcute:music-line' />
-								<HobbyCard title='Random skills' description='Cubing, parkour, card tricks, juggling, stretching…' icon='mingcute:flash-line' />
-							</div>
-						</div>
+						<OtherHobbies />
 					</div>
 				</section>
 				<section id='tech-stack' className='items-center'>

@@ -1,3 +1,6 @@
+import '@/src/assets/_base.scss';
+import '@/src/assets/_form.scss';
+import '@/src/assets/_nav.scss';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';

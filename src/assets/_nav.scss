@@ -9,6 +9,7 @@ nav {
 	border-radius: 1000rem;
 	border: 1px solid var(--gray);
 	background-color: oklch(from var(--darker) l c h / 0.9);
+	z-index: 1001;
 
 	& a {
 		color: var(--white);
@@ -55,6 +56,7 @@ header > .menu {
 	border-radius: 50%;
 	font-size: 1.25rem;
 	background-color: var(--darker);
+	z-index: 10;
 
 	transition: transform 0.2s ease;
 

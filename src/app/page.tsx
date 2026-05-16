@@ -1,12 +1,8 @@
 import domacnostHrouImage from '@/public/domacnost-hrou.png';
 import poznavackaImage from '@/public/poznavacka.png';
-import '@/src/assets/_base.scss';
-import '@/src/assets/_form.scss';
-import '@/src/assets/_nav.scss';
 import { Icon } from '@iconify/react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { sendEmail } from '../api/sendEmail';
 import ContactForm from '../components/ContactForm';
 import EmailField from '../components/EmailField';
 import HobbyCard from '../components/HobbyCard';

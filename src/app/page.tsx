@@ -88,8 +88,8 @@ export default function Home() {
 				<section id='projects' className='items-center'>
 					<h2 className='text-center'>Projects</h2>
 					<div className='flex flex-wrap justify-center gap-4 w-full'>
-						<ProjectCard title='Poznávačka tool' description='App that helps students learn the names of animals, plants and other biology stuff.' tags={['TypeScript', 'React', 'Tailwind CSS']} link='https://poznavacka.netlify.app' image={poznavackaImage} />
-						<ProjectCard title='Domácnost hrou' description='A portfolio/e-commerce type website focused on selling my client and a brand they’re working for.' tags={['NextJS', 'React', 'Tailwind CSS', 'PHP']} link='https://domacnosthrou.cz' image={domacnostHrouImage} />
+						<ProjectCard title='Poznávačka Tool' description='App that helps students learn the names of animals, plants and other biology stuff.' tags={['TypeScript', 'React', 'Tailwind CSS']} link='https://poznavacka.netlify.app' image={poznavackaImage} />
+						<ProjectCard title='Domácnost hrou' description='A portfolio/e-commerce type website focused on selling my client and a brand they’re working for.' tags={['Next', 'React', 'Tailwind CSS', 'PHP', 'SCSS']} link='https://domacnosthrou.cz' image={domacnostHrouImage} />
 					</div>
 				</section>
 				<section id='contact' className='items-center'>

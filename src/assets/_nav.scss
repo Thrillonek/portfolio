@@ -27,8 +27,7 @@ nav {
 		border-radius: 0.5rem;
 		background-color: var(--darker);
 		align-items: flex-start;
-		padding: 1.5rem;
-		padding-top: 3rem;
+		padding: 3rem 3rem 1.5rem 1.5rem;
 
 		font-size: 1.25rem;
 
@@ -38,6 +37,10 @@ nav {
 			opacity: 0;
 			pointer-events: none;
 		}
+	}
+
+	@media (max-width: 450px) {
+		inset: 1rem;
 	}
 }
 

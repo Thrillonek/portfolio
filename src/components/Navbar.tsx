@@ -5,19 +5,35 @@ import { Icon } from '@iconify/react';
 import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Navbar() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+	useEffect(() => {
+		function handleClick() {
+			setIsMenuOpen(false);
+		}
+
+		document.querySelectorAll('nav a, nav button').forEach((el) => {
+			el.addEventListener('click', handleClick);
+		});
+
+		return () => {
+			document.querySelectorAll('nav a, nav button').forEach((el) => {
+				el.removeEventListener('click', handleClick);
+			});
+		};
+	}, []);
 
 	return (
 		<header className='flex justify-center w-full'>
 			<button className='menu' onClick={() => setIsMenuOpen(true)}>
 				<Icon icon='mingcute:menu-fill' className='text-light-gray' />
 			</button>
-			<div onClick={() => setIsMenuOpen(false)} className={clsx('fixed inset-0 bg-black/50 opacity-0 transition-opacity', isMenuOpen ? 'opacity-100 pointer-events-auto' : 'pointer-events-none')}></div>
+			<div onClick={() => setIsMenuOpen(false)} className={clsx('lg:hidden fixed inset-0 bg-black/50 opacity-0 transition-opacity', isMenuOpen ? 'opacity-100 pointer-events-auto' : 'pointer-events-none')}></div>
 			<nav data-active={isMenuOpen} className='shadow-2xl'>
-				<button className='top-1 left-1 absolute bg-dark p-2 rounded-full' onClick={() => setIsMenuOpen(false)}>
+				<button className='lg:hidden top-1 left-1 absolute bg-dark p-2 rounded-full' onClick={() => setIsMenuOpen(false)}>
 					<Icon icon='mingcute:close-line' className='text-light-gray' />
 				</button>
 				<Link href='#hero' className='flex items-center gap-2'>

@@ -48,8 +48,8 @@ export default function OtherHobbies() {
 			<div data-visible={isHobbyInfoVisible} className={classes['hobby-info']}>
 				<HobbyInfo activeHobby={activeHobby} />
 			</div>
-			{Object.keys(hobbies).map((hobby) => (
-				<Modal title='Hobby' name={hobby}>
+			{Object.keys(hobbies).map((hobby, idx) => (
+				<Modal key={idx} title='Hobby' name={hobby}>
 					<HobbyInfo activeHobby={hobby} />
 				</Modal>
 			))}

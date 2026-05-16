@@ -13,11 +13,13 @@
 
 	transition:
 		background-color 0.3s ease,
-		border-color 0.3s ease;
+		border-color 0.3s ease,
+		box-shadow 0.3s ease;
 
 	&:hover {
 		background-color: oklch(from var(--accent) calc(l + 0.07) c h);
 		border-color: oklch(from var(--accent) calc(l + 0.07) c h);
+		box-shadow: 0 0 1rem 0.25rem oklch(from var(--accent) l c h / 0.5);
 	}
 
 	&.secondary {

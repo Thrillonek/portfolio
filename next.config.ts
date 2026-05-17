@@ -4,6 +4,7 @@ const nextConfig = {
 	sassOptions: {
 		silenceDeprecations: ['legacy-js-api'],
 	},
+	output: 'export',
 };
 
 module.exports = nextConfig;

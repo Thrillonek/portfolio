@@ -57,11 +57,6 @@ jobs:
             ${{ runner.os }}-pnpm-store-
       - name: Install dependencies
         run: pnpm install
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-        with:
-          static_site_generator: next
       - name: Build with Next.js
         run: pnpm build
       - name: Upload artifact

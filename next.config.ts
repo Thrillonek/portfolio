@@ -5,6 +5,7 @@ const nextConfig = {
 	images: {
 		unoptimized: true,
 	},
+	base: '/portfolio/',
 };
 
 module.exports = nextConfig;

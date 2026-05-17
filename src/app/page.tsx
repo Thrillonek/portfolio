@@ -8,6 +8,7 @@ import EmailField from '../components/EmailField';
 import Navbar from '../components/Navbar';
 import OtherHobbies from '../components/OtherHobbies';
 import { ProjectCard } from '../components/ProjectCard';
+import SkillIcon from '../components/SkillIcon';
 import iconSvg from './icon.svg';
 
 export default function Home() {
@@ -73,9 +74,39 @@ export default function Home() {
 						<OtherHobbies />
 					</div>
 				</section>
-				<section id='tech-stack' className='items-center'>
-					<h2 className='text-center'>Tech stack</h2>
-					<div className='flex gap-8 p-4 border-gray border-y'></div>
+				<section id='skills' className='items-center'>
+					<h2 className='text-center'>Skills</h2>
+					<div className='flex flex-col gap-px bg-gray *:bg-black py-px'>
+						<div className='items-center gap-4 grid lg:grid-cols-[8rem_1fr] px-4 py-2'>
+							<h4 className='max-lg:pt-2 text-center'>Frontend</h4>
+							<div className='flex flex-wrap max-lg:justify-center gap-4'>
+								<SkillIcon icon='mdi:react' color='#61DAFB' name='React' level={4} />
+								<SkillIcon icon='mdi:language-typescript' color='#2D79C7' name='TypeScript' level={4} />
+								<SkillIcon icon='mdi:language-html5' color='#E44D26' name='HTML' level={4} />
+								<SkillIcon icon='mdi:language-css3' color='#214CE5' name='CSS' level={4} />
+								<SkillIcon icon='mdi:sass' color='#CE6B9C' name='Sass' level={3} />
+								<SkillIcon icon='mdi:tailwind' color='#3EBFF8' name='Tailwind&nbsp;CSS' level={4} />
+							</div>
+						</div>
+						<div className='items-center gap-4 grid lg:grid-cols-[8rem_1fr] px-4 py-2'>
+							<h4 className='max-lg:pt-2 text-center'>Backend</h4>
+							<div className='flex flex-wrap max-lg:justify-center gap-4'>
+								<SkillIcon icon='mdi:nodejs' color='#539E43' name='Node.js' level={3} />
+								<SkillIcon icon='lineicons:mongodb' color='#086E50' name='MongoDB' level={2} />
+								<SkillIcon icon='simple-icons:express' color='#F3E024' name='Express.js' level={2} />
+								<SkillIcon icon='devicon:nextjs' color='#FFF' name='Next.js' level={3} />
+								<SkillIcon icon='material-symbols:sql' color='#3EBFF8' name='SQL' level={2} />
+							</div>
+						</div>
+						<div className='items-center gap-4 grid lg:grid-cols-[8rem_1fr] px-4 py-2'>
+							<h4 className='max-lg:pt-2 text-center'>Tools</h4>
+							<div className='flex flex-wrap max-lg:justify-center gap-4'>
+								<SkillIcon icon='mdi:git' color='#F05030' name='Git' level={3} />
+								<SkillIcon icon='devicon:figma' color='#F40' name='Figma' level={4} />
+								<SkillIcon icon='devicon:vscode' color='#F40' name='VS Code' level={4} />
+							</div>
+						</div>
+					</div>
 				</section>
 				<section id='projects' className='items-center'>
 					<h2 className='text-center'>Projects</h2>
@@ -103,8 +134,8 @@ export default function Home() {
 						<Link className='w-fit hover:underline' href='#about'>
 							About me
 						</Link>
-						<Link className='w-fit hover:underline' href='#tech-stack'>
-							Tech stack
+						<Link className='w-fit hover:underline' href='#skills'>
+							Skills
 						</Link>
 						<Link className='w-fit hover:underline' href='#projects'>
 							Projects

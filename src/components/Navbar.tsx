@@ -42,7 +42,7 @@ export default function Navbar() {
 				</Link>
 				<div className='flex max-lg:flex-col gap-4'>
 					<Link href='#about'>About</Link>
-					<Link href='#tech-stack'>Tech stack</Link>
+					<Link href='#skills'>Skills</Link>
 					<Link href='#projects'>Projects</Link>
 					<Link href='#contact'>Contact</Link>
 				</div>

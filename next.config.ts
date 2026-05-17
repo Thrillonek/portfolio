@@ -5,7 +5,6 @@ const nextConfig = {
 		silenceDeprecations: ['legacy-js-api'],
 	},
 	output: 'export',
-	basePath: '/portfolio',
 	images: {
 		unoptimized: true,
 	},

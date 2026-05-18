@@ -11,7 +11,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
 	title: 'Jindřich Kraina',
-	description: 'Portfolio od Jindřicha Krainy, frontendového vývojáře se zaměřením na React a Next.js.',
+	description: "Jindřich Kraina's personal portfolio website showcasing projects, skills, and contact information.",
 };
 
 export default function RootLayout({

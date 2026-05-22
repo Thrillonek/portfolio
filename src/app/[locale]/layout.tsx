@@ -1,9 +1,12 @@
 import '@/src/assets/_base.scss';
 import '@/src/assets/_form.scss';
 import '@/src/assets/_nav.scss';
+import { routing } from '@/src/i18n/routing';
 import type { Metadata } from 'next';
+import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { Inter } from 'next/font/google';
-import './globals.css';
+import { notFound } from 'next/navigation';
+import '../globals.css';
 
 const inter = Inter({
 	subsets: ['latin'],
@@ -14,14 +17,23 @@ export const metadata: Metadata = {
 	description: "Jindřich Kraina's personal portfolio website showcasing projects, skills, and contact information.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
 	children,
+	params,
 }: Readonly<{
 	children: React.ReactNode;
+	params: Promise<{ locale: string }>;
 }>) {
+	const { locale } = await params;
+	if (!hasLocale(routing.locales, locale)) {
+		notFound();
+	}
+
 	return (
 		<html lang='en' className={`${inter.className} h-full antialiased scroll-smooth scroll-pt-8`}>
-			<body className='flex flex-col min-h-full'>{children}</body>
+			<body className='flex flex-col min-h-full'>
+				<NextIntlClientProvider>{children}</NextIntlClientProvider>
+			</body>
 		</html>
 	);
 }

@@ -1,17 +1,20 @@
 import domacnostHrouImage from '@/public/domacnost-hrou.png';
 import poznavackaImage from '@/public/poznavacka.png';
+import ContactForm from '@/src/components/ContactForm';
+import EmailField from '@/src/components/EmailField';
+import Navbar from '@/src/components/Navbar';
+import OtherHobbies from '@/src/components/OtherHobbies';
+import { ProjectCard } from '@/src/components/ProjectCard';
+import SkillIcon from '@/src/components/SkillIcon';
 import { Icon } from '@iconify/react';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
-import ContactForm from '../components/ContactForm';
-import EmailField from '../components/EmailField';
-import Navbar from '../components/Navbar';
-import OtherHobbies from '../components/OtherHobbies';
-import { ProjectCard } from '../components/ProjectCard';
-import SkillIcon from '../components/SkillIcon';
-import iconSvg from './icon.svg';
+import iconSvg from '../icon.svg';
 
 export default function Home() {
+	const t = useTranslations();
+
 	return (
 		<>
 			<Navbar />
@@ -20,7 +23,7 @@ export default function Home() {
 					<h1 className='text-center'>Jindřich Kraina</h1>
 					<div className='bg-accent rounded w-12 h-1' />
 					<h4 className='text-center'>Full-stack developer & UI/UX designer</h4>
-					<p className='text-center'>I use React and Node.js with some help of Figma to create elegant & accessible websites and other user interfaces. Although I’m still a student, I’ve made some big projects that people use and love.</p>
+					<p className='text-center'>{t('hero.description')}</p>
 					<p className='flex items-center gap-2'>
 						<Icon icon='mingcute:location-fill' className='text-accent text-xl' />
 						<span>Havířov, Czech Republic</span>

@@ -5,6 +5,7 @@ import { Icon } from '@iconify/react';
 import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 export default function Navbar() {
@@ -26,6 +27,8 @@ export default function Navbar() {
 		};
 	}, []);
 
+	const params = useParams() as { locale: string };
+
 	return (
 		<header className='flex justify-center w-full'>
 			<button className='menu' onClick={() => setIsMenuOpen(true)}>
@@ -46,10 +49,10 @@ export default function Navbar() {
 					<Link href='#projects'>Projects</Link>
 					<Link href='#contact'>Contact</Link>
 				</div>
-				<button className='flex items-center gap-1 px-2 py-1 rounded text-white hover:text-accent transition-colors hover:bg-accent-muted'>
+				<Link href={`/${params.locale === 'cs' ? 'en' : 'cs'}`} className='flex items-center gap-1 px-2 py-1 rounded text-white hover:text-accent transition-colors hover:bg-accent-muted'>
 					<Icon icon='mdi:language' />
-					<span className='text-sm'>EN</span>
-				</button>
+					<span className='text-sm'>{params.locale.toUpperCase()}</span>
+				</Link>
 			</nav>
 		</header>
 	);

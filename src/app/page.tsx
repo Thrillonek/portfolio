@@ -96,10 +96,10 @@ export default function Home() {
 							</h4>
 							<div className='flex flex-wrap max-lg:justify-center gap-4'>
 								<SkillIcon icon='mdi:nodejs' color='#539E43' name='Node.js' level={3} />
-								<SkillIcon icon='lineicons:mongodb' color='#086E50' name='MongoDB' level={2} />
+								<SkillIcon icon='lineicons:mongodb' color='#086E50' name='MongoDB' level={3} />
 								<SkillIcon icon='simple-icons:express' color='#F3E024' name='Express.js' level={2} />
 								<SkillIcon icon='devicon:nextjs' color='#FFF' name='Next.js' level={3} />
-								<SkillIcon icon='material-symbols:sql' color='#3EBFF8' name='SQL' level={2} />
+								<SkillIcon icon='material-symbols:sql' color='#3EBFF8' name='SQL' level={3} />
 							</div>
 						</div>
 						<div className='items-center gap-4 grid lg:grid-cols-[8rem_1fr] px-4 py-2'>

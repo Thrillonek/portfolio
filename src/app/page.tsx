@@ -76,9 +76,11 @@ export default function Home() {
 				</section>
 				<section id='skills' className='items-center'>
 					<h2 className='text-center'>Skills</h2>
-					<div className='flex flex-col gap-px bg-gray *:bg-black py-px'>
+					<div className='flex flex-col gap-8'>
 						<div className='items-center gap-4 grid lg:grid-cols-[8rem_1fr] px-4 py-2'>
-							<h4 className='max-lg:pt-2 text-center'>Frontend</h4>
+							<h4 style={{ textDecoration: 'underline 4px var(--accent)' }} className='max-lg:pt-2 max-lg:text-center'>
+								Frontend
+							</h4>
 							<div className='flex flex-wrap max-lg:justify-center gap-4'>
 								<SkillIcon icon='mdi:react' color='#61DAFB' name='React' level={4} />
 								<SkillIcon icon='mdi:language-typescript' color='#2D79C7' name='TypeScript' level={4} />
@@ -89,7 +91,9 @@ export default function Home() {
 							</div>
 						</div>
 						<div className='items-center gap-4 grid lg:grid-cols-[8rem_1fr] px-4 py-2'>
-							<h4 className='max-lg:pt-2 text-center'>Backend</h4>
+							<h4 style={{ textDecoration: 'underline 4px var(--accent)' }} className='max-lg:pt-2 max-lg:text-center'>
+								Backend
+							</h4>
 							<div className='flex flex-wrap max-lg:justify-center gap-4'>
 								<SkillIcon icon='mdi:nodejs' color='#539E43' name='Node.js' level={3} />
 								<SkillIcon icon='lineicons:mongodb' color='#086E50' name='MongoDB' level={2} />
@@ -99,7 +103,9 @@ export default function Home() {
 							</div>
 						</div>
 						<div className='items-center gap-4 grid lg:grid-cols-[8rem_1fr] px-4 py-2'>
-							<h4 className='max-lg:pt-2 text-center'>Tools</h4>
+							<h4 style={{ textDecoration: 'underline 4px var(--accent)' }} className='max-lg:pt-2 max-lg:text-center'>
+								Tools
+							</h4>
 							<div className='flex flex-wrap max-lg:justify-center gap-4'>
 								<SkillIcon icon='mdi:git' color='#F05030' name='Git' level={3} />
 								<SkillIcon icon='devicon:figma' color='#F40' name='Figma' level={4} />

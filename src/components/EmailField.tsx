@@ -19,6 +19,7 @@ export default function EmailField() {
 		<button data-tooltip={copied ? 'Email copied!' : 'Copy email'} onClick={copyEmail} className={classes.emailField}>
 			<Icon className='text-accent text-xl' icon='mingcute:mail-line' />
 			<span>{email}</span>
+			<Icon className='text-light-gray' icon='mingcute:copy-2-line' />
 		</button>
 	);
 }

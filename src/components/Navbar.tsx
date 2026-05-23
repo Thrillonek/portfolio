@@ -3,6 +3,7 @@
 import iconSvg from '@/src/app/icon.svg';
 import { Icon } from '@iconify/react';
 import clsx from 'clsx';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
@@ -28,6 +29,7 @@ export default function Navbar() {
 	}, []);
 
 	const params = useParams() as { locale: string };
+	const t = useTranslations();
 
 	return (
 		<header className='flex justify-center w-full'>
@@ -44,10 +46,10 @@ export default function Navbar() {
 					<h4>Jindřich Kraina</h4>
 				</Link>
 				<div className='flex max-lg:flex-col gap-4'>
-					<Link href='#about'>About</Link>
-					<Link href='#skills'>Skills</Link>
-					<Link href='#projects'>Projects</Link>
-					<Link href='#contact'>Contact</Link>
+					<Link href='#about'>{t('nav.about')}</Link>
+					<Link href='#skills'>{t('nav.skills')}</Link>
+					<Link href='#projects'>{t('nav.projects')}</Link>
+					<Link href='#contact'>{t('nav.contact')}</Link>
 				</div>
 				<Link href={`/${params.locale === 'cs' ? 'en' : 'cs'}`} className='flex items-center gap-1 px-2 py-1 rounded text-white hover:text-accent transition-colors hover:bg-accent-muted'>
 					<Icon icon='mdi:language' />

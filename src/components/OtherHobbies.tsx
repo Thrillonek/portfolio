@@ -2,6 +2,7 @@
 
 import classes from '@/src/assets/_OtherHobbies.module.scss';
 import { Icon } from '@iconify/react';
+import { useTranslations } from 'next-intl';
 import { MouseEvent, useEffect, useState } from 'react';
 import { hobbies } from '../data/hobbies';
 import { useApplicationStore } from '../data/stores';
@@ -42,6 +43,8 @@ export default function OtherHobbies() {
 		};
 	}, []);
 
+	const t = useTranslations();
+
 	return (
 		<div className={'bg-darker relative p-8 border border-gray rounded-2xl h-fit layout-col-4'}>
 			<h3>My other hobbies</h3>
@@ -54,23 +57,25 @@ export default function OtherHobbies() {
 				</Modal>
 			))}
 			<div className='gap-4 grid 2xl:grid-cols-2'>
-				<HobbyCard title='Calisthenics' description='A cool athletic sport focused on physical exercises using your bodyweight and some bars.' icon='mingcute:barbell-line' />
-				<HobbyCard title='Math' description='I like learning new concepts, going to competitions and training my brain.' icon='mynaui:math-square' />
-				<HobbyCard title='Music' description='I think everyone has this on their list. I still have to include it here, because I listen to music everyday.' icon='mingcute:music-line' />
-				<HobbyCard title='Random skills' description='Cubing, parkour, card tricks, juggling, stretching…' icon='mingcute:flash-line' />
+				<HobbyCard title={t('otherHobbies.Math.title')} description={t('otherHobbies.Math.description')} icon='mingcute:barbell-line' />
+				<HobbyCard title={t('otherHobbies.Calisthenics.title')} description={t('otherHobbies.Calisthenics.description')} icon='mynaui:math-square' />
+				<HobbyCard title={t('otherHobbies.Music.title')} description={t('otherHobbies.Music.description')} icon='mingcute:music-line' />
+				<HobbyCard title={t('otherHobbies.Random.title')} description={t('otherHobbies.Random.description')} icon='mingcute:flash-line' />
 			</div>
 		</div>
 	);
 }
 
 function HobbyInfo({ activeHobby }: { activeHobby: string | null }) {
+	const t = useTranslations();
+
 	return (
 		<>
 			<div className='flex items-center gap-4 mb-2'>
 				<div className='place-items-center grid rounded-full w-12 aspect-square bg-accent-muted'>{activeHobby && <Icon icon={hobbies[activeHobby as keyof typeof hobbies].icon} className='text-accent text-2xl' />}</div>
 				<h3>{activeHobby}</h3>
 			</div>
-			<p>{hobbies[activeHobby as keyof typeof hobbies]?.description}</p>
+			{activeHobby && <p>{t(`otherHobbies.${activeHobby.split(' ')[0]}.details`)}</p>}
 		</>
 	);
 }

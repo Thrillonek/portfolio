@@ -1,5 +1,81 @@
 {
+	"nav": {
+		"about": "O mně",
+		"skills": "Dovednosti",
+		"projects": "Projekty",
+		"contact": "Kontakt",
+		"navigation": "Navigace"
+	},
 	"hero": {
-		"description": "Používám React a Node.js s trochou pomocí Figmy pro tvorbu elegantních a přístupných webových stránek. I když jsem pořád studuji, mám za sebou pár velkých projektů, které lidi s radostí používají."
-	}
+		"description": "Používám React a Node.js s trochou pomocí Figmy pro tvorbu elegantních a přístupných webových stránek. I když jsem pořád studuji, mám za sebou pár velkých projektů, které lidi rádi používají.",
+		"location": "Havířov, Česká republika",
+		"primaryCTA": "Kontaktujte me",
+		"secondaryCTA": "Moje projekty"
+	},
+	"about": {
+		"description1": "Jsem samouk webový vývojář a designer, momentálně studující na Gymnáziu Komenského v Havířově. V budoucnost I chci jít na VŠB do Ostravy, abych mohl studovat informatiku. Baví mě řešit problémy a učit se věci, které mi přijdou zajímavé (nejen IT a matiku).",
+		"description2": "Začal jsem jako vývojář, ale pak jsem se musel naučit design, protože moje projekty vypadaly hrozně. Taky jsem se mezitím naučil, že si svoje věci musím organizovat. Protože jsem vždycky strávil hrozně moc času jen zjišťováním, co se v mém kódu vlastně děje a kde co je. A u designu jsem zjistil, že UX by měl vždycky být na prvním místě. Jasně, můžete být kreativní, ale jsou daná pravidla, která nemůžete porušovat. Uživatelé si prostě zvykly na dané věci na stránkách a pokud se ve stránce nevyznají, odejdou.",
+		"yearsOfExperience": "Roků zkušeností",
+		"largeProjects": "Velké projekty",
+		"lang1": {
+			"name": "Čeština",
+			"level": "Rodilý mluvčí"
+		},
+		"lang2": {
+			"name": "Angličtina",
+			"level": "Plynulý"
+		}
+	},
+	"otherHobbies": {
+		"title": "Další zájmy",
+		"Calisthenics": {
+			"title": "Kalistenika",
+			"description": "Zábavný atletický sport zaměřený na posilování s pomocí vlastní váhy a hrazd či jiných tyčí.",
+			"details": "Toto jsem si zvolil namísto posilovny, protože to můžu dělat doma a zalíbily se mi ty dovednosti, ke kterým se můžu dostat. Občas je pro mě těžké držet se rutiny, přesto ale trénuju konzistentně. "
+		},
+		"Math": {
+			"title": "Matika",
+			"description": "Rád se učím nové koncepty, chodím na soutěže a vyzývám svoje myšlení a znalosti.",
+			"details": "When I see or hear something math-related I don't understand yet, I tend to look it up. I don't really know why, but I just love doing and solving math problems."
+		},
+		"Music": {
+			"title": "Hudba",
+			"description": "Myslím, že tohle má na svém seznamu každý. Já jsem tady hudbu musel přidat i tak, protože ji poslouchám každý den.",
+			"details": "Poslouchám všechno, co má dobrý \"vibe\" a aspoň trochu promyšlený text. Pokud je text opravdu dobrý, poslouchám to delší dobu. Jinak preferuju rap, techno a rock."
+		},
+		"Random": {
+			"title": "Náhodné dovednosti",
+			"description": "Skládání rubikovky, parkour, karetní triky, žonglování, stretching…",
+			"details": "Když se dozvím o nějaké zajímavé dovednosti a mám trochu času, zkusím se ji naučit. Občas je to na dlouho, jindy to zabere chvilku. Celkem to závisí na tom, jestli se o to zajímají i lidi kolem mě a taky na obtížnosti dané dovednosti."
+		}
+	},
+	"tools": "Nástroje",
+	"projects": {
+		"poznavacka": {
+			"title": "Poznávačka Tool",
+			"description": "Aplikace, která pomáhá studentům se naučit názvy zvířat, rostlin a dalších druhů.",
+			"what": "Aplikace, která vytváří interaktivní kvízy a seznamy ze souborů obrázků, aby se studenti mohli rychleji naučit názvy zvířat, rostliny a dalších druhů zobrazených na obrázcích. Klasické interaktivní a vysoce nastavitelné rozhraní.",
+			"why": "Poprvé, co jsme ve třídě dostali za úkol se naučit jména 150 druhů rostlin, jsem si řekl, že bych proces učení mohl zlehčit pomocí mých znalostí ve vývoji webu - a tak jsem vytvořil tuto aplikaci. V průběhu let jsem ji vylepšoval mezitím, co jsem se sám zlepšoval. Taky jsem ji ukázal ostatním třídám a učitelům v mojí škole, díky čemuž ji už použilo přes 100 studentů, aby si zjednodušili a zrychlili proces učení na test.",
+			"issues": "Aplikace nemá backend. Sice ukládá progres a nastavení do místního úložiště, ale systém přihlašování by se sem určitě hodil. Problém je, že hosting na dobrý backend by stál peníze a aplikace zpeněžněna není."
+		},
+		"domacnostHrou": {
+			"title": "Domácnost hrou",
+			"description": "Stránka typu osobní profil/elektronický obchod zaměřená na prodání mého klienta a značky, pro kterou pracuje.",
+			"what": "Stránka funguje hlavně jako osobní profil pro moji mamku, která pracuje pro firmu s marketingovým modelem získání provize za doporučení produktu. Stránka se snaží představit a prodat služby mojí mamky a produkty firmy či jejich celou značku",
+			"why": "Ze začátku moje mamka potřebovala stránku jen pro ověření na jiné službě, kterou používala. Takže první verzi jsem nedělal já a nebyla ani udržována. Před pár lety jsem se rozhodl, že to celé přepíšu do Reactu jako cvičení a později jsem několikrát aktualizoval design (a dokonce vytvořil logo). Moje mamka nakonec začala používat moji verzi, protože vypadala a fungovala o dost lépe.",
+			"issues": "Marketing by se dal zlepšit. I když stránka vypadá dobře, mám na vědomí, že nemá přesně daný způsob, jak zákazníka navést tam, kam chce. Momentálně ale stránka dělá to, co dělat má a já se spíše zajímám o kódování a design než marketing."
+		},
+		"whyTitle": "Proč?",
+		"issuesTitle": "Známé problémy",
+		"seeMore": "Více",
+		"goToPage": "Navštívit stránku"
+	},
+	"contact": {
+		"paragraph": "Máte zájem o spolupráci? Vyplňte tento formulář a já se k Vám dostanu hned, jak to bude možné. Nebo mi taky můžete napsat email.",
+		"name": "Vaše Jméno",
+		"email": "Vaše Email",
+		"message": "Vaše Zpráva (nepovinné)",
+		"CTA": "Odeslat!"
+	},
+	"license": "Všechna práva vyhrazena."
 }

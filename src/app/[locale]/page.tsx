@@ -26,31 +26,31 @@ export default function Home() {
 					<p className='text-center'>{t('hero.description')}</p>
 					<p className='flex items-center gap-2'>
 						<Icon icon='mingcute:location-fill' className='text-accent text-xl' />
-						<span>Havířov, Czech Republic</span>
+						<span>{t('hero.location')}</span>
 					</p>
 					<div className='flex flex-wrap justify-center gap-4'>
 						<Link className='button' href='#contact'>
-							Contact me
+							{t('hero.primaryCTA')}
 						</Link>
 						<Link className='button secondary' href='#projects'>
-							View my projects
+							{t('hero.secondaryCTA')}
 						</Link>
 					</div>
 				</section>
 				<section id='about'>
-					<h2>About me</h2>
+					<h2>{t('nav.about')}</h2>
 					<div className='gap-8 grid lg:grid-cols-2'>
 						<div className='layout-col-4'>
-							<p>I’m a self-taught web developer and designer, currently studying at Gymnázium Komenského Havířov. In the future, I want to go to VŠB College in Ostrava to study IT. I enjoy solving problems and learning things I find interesting (not only IT and math).</p>
-							<p>I started as a developer, but had to learn design along the way because my projects looked crappy. I also learned the hard way that I need to organize my stuff. Because otherwise, I would spend a lot of time just figuring out what’s happening in the codebase. And in design, I found out UX should always come in the first place. Sure, you can get creative, but there are rules you cannot bend, because users are just used to something and will bounce once they get confused.</p>
+							<p>{t('about.description1')}</p>
+							<p>{t('about.description2')}</p>
 							<div className='flex gap-2'>
 								<div className='p-4 rounded-2xl bg-accent-muted layout-col-2'>
 									<h3 className='text-accent'>3+</h3>
-									<p>Years of experience</p>
+									<p>{t('about.yearsOfExperience')}</p>
 								</div>
 								<div className='p-4 rounded-2xl bg-accent-muted layout-col-2'>
 									<h3 className='text-accent'>2</h3>
-									<p>Large projects</p>
+									<p>{t('about.largeProjects')}</p>
 								</div>
 							</div>
 							<div className='flex'>
@@ -59,8 +59,8 @@ export default function Home() {
 										<span className='font-bold text-accent'>C2</span>
 									</div>
 									<div className='layout-col-0'>
-										<p className='font-bold text-white'>Czech</p>
-										<p className='text-xs'>Native</p>
+										<p className='font-bold text-white'>{t('about.lang1.name')}</p>
+										<p className='text-xs'>{t('about.lang1.level')}</p>
 									</div>
 								</div>
 								<div className='flex items-center gap-2 p-2'>
@@ -68,8 +68,8 @@ export default function Home() {
 										<span className='font-bold text-accent'>C1</span>
 									</div>
 									<div className='layout-col-0'>
-										<p className='font-bold text-white'>English</p>
-										<p className='text-xs'>Fluent</p>
+										<p className='font-bold text-white'>{t('about.lang2.name')}</p>
+										<p className='text-xs'>{t('about.lang2.level')}</p>
 									</div>
 								</div>
 							</div>
@@ -78,7 +78,7 @@ export default function Home() {
 					</div>
 				</section>
 				<section id='skills' className='items-center'>
-					<h2 className='text-center'>Skills</h2>
+					<h2 className='text-center'>{t('nav.skills')}</h2>
 					<div className='flex flex-col gap-8'>
 						<div className='items-center gap-4 grid lg:grid-cols-[8rem_1fr] px-4 py-2'>
 							<h4 style={{ textDecoration: 'underline 4px var(--accent)' }} className='max-lg:pt-2 max-lg:text-center'>
@@ -107,7 +107,7 @@ export default function Home() {
 						</div>
 						<div className='items-center gap-4 grid lg:grid-cols-[8rem_1fr] px-4 py-2'>
 							<h4 style={{ textDecoration: 'underline 4px var(--accent)' }} className='max-lg:pt-2 max-lg:text-center'>
-								Tools
+								{t('tools')}
 							</h4>
 							<div className='flex flex-wrap max-lg:justify-center gap-4'>
 								<SkillIcon icon='mdi:git' color='#F05030' name='Git' level={3} />
@@ -118,15 +118,15 @@ export default function Home() {
 					</div>
 				</section>
 				<section id='projects' className='items-center'>
-					<h2 className='text-center'>Projects</h2>
+					<h2 className='text-center'>{t('nav.projects')}</h2>
 					<div className='flex flex-wrap justify-center gap-4 w-full'>
 						<ProjectCard title='Poznávačka Tool' description='App that helps students learn the names of animals, plants and other biology stuff.' tags={['TypeScript', 'React', 'Tailwind CSS']} link='https://poznavacka.netlify.app' image={poznavackaImage} />
 						<ProjectCard title='Domácnost hrou' description='A portfolio/e-commerce type website focused on selling my client and a brand they’re working for.' tags={['Next', 'React', 'Tailwind CSS', 'PHP', 'SCSS']} link='https://domacnosthrou.cz' image={domacnostHrouImage} />
 					</div>
 				</section>
 				<section id='contact' className='items-center'>
-					<h2 className='text-center'>Contact</h2>
-					<p className='text-center'>Want to work with me? Just fill out this form and I'll get back to you as soon as possible. Or you can write me an email.</p>
+					<h2 className='text-center'>{t('nav.contact')}</h2>
+					<p className='text-center'>{t('contact.paragraph')}</p>
 					<EmailField />
 					<ContactForm />
 				</section>
@@ -139,22 +139,22 @@ export default function Home() {
 						<p>Full-stack developer & UI/UX designer</p>
 					</div>
 					<div className='text-light-gray layout-col-2'>
-						<h4>Navigation</h4>
+						<h4>{t('nav.navigation')}</h4>
 						<Link className='w-fit hover:underline' href='#about'>
-							About me
+							{t('nav.about')}
 						</Link>
 						<Link className='w-fit hover:underline' href='#skills'>
-							Skills
+							{t('nav.skills')}
 						</Link>
 						<Link className='w-fit hover:underline' href='#projects'>
-							Projects
+							{t('nav.projects')}
 						</Link>
 						<Link className='w-fit hover:underline' href='#contact'>
-							Contact
+							{t('nav.contact')}
 						</Link>
 					</div>
 					<div className='layout-col-4'>
-						<h4>Contact</h4>
+						<h4>{t('nav.contact')}</h4>
 						<div className='flex gap-2'>
 							<Link href='https://github.com/Thrillonek' className='social-link' target='_blank'>
 								<Icon icon='mingcute:github-line' />
@@ -171,7 +171,9 @@ export default function Home() {
 				</section>
 				<div className='bg-dark w-full h-px' />
 				<div className='p-4 text-sm text-center'>
-					<p className='text-neutral-400!'>&copy; {new Date().getFullYear()} Jindřich Kraina. All rights reserved.</p>
+					<p className='text-neutral-400!'>
+						&copy; {new Date().getFullYear()} Jindřich Kraina. {t('license')}
+					</p>
 				</div>
 			</footer>
 		</>

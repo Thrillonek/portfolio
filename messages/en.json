@@ -1,5 +1,81 @@
 {
+	"nav": {
+		"about": "About me",
+		"skills": "Skills",
+		"projects": "Projects",
+		"contact": "Contact",
+		"navigation": "Navigation"
+	},
 	"hero": {
-		"description": "I use React and Node.js with some help of Figma to create elegant & accessible websites and other user interfaces. Although I’m still a student, I’ve made some big projects that people use and love."
-	}
+		"description": "I use React and Node.js with some help of Figma to create elegant & accessible websites and other user interfaces. Although I’m still a student, I’ve made some big projects that people use and love.",
+		"location": "Havířov, Czech Republic",
+		"primaryCTA": "Contact me",
+		"secondaryCTA": "My projects"
+	},
+	"about": {
+		"description1": "I’m a self-taught web developer and designer, currently studying at Gymnázium Komenského Havířov. In the future, I want to go to VŠB College in Ostrava to study IT. I enjoy solving problems and learning things I find interesting (not only IT and math).",
+		"description2": "I started as a developer, but had to learn design along the way because my projects looked crappy. I also learned the hard way that I need to organize my stuff. Because otherwise, I would spend a lot of time just figuring out what’s happening in the codebase. And in design, I found out UX should always come in the first place. Sure, you can get creative, but there are rules you cannot bend. That's because users are just used to something and will bounce once they get confused.",
+		"yearsOfExperience": "Years of experience",
+		"largeProjects": "Large projects",
+		"lang1": {
+			"name": "Czech",
+			"level": "Native"
+		},
+		"lang2": {
+			"name": "English",
+			"level": "Fluent"
+		}
+	},
+	"otherHobbies": {
+		"title": "Other interests",
+		"Calisthenics": {
+			"title": "Calisthenics",
+			"description": "A cool athletic sport focused on physical exercises using your bodyweight and some bars.",
+			"details": "I chose this instead of the gym, because I can do it at home and I liked the skills you can built up to. Sometimes it's hard to keep up with the routine, but I train consistently anyway."
+		},
+		"Math": {
+			"title": "Math",
+			"description": "I like learning new concepts, going to competitions and challenging my mind.",
+			"details": "When I see or hear something math-related I don't understand yet, I tend to look it up. I don't really know why, but I just love doing and solving math problems."
+		},
+		"Music": {
+			"title": "Music",
+			"description": "I think everyone has this on their list. I still have to include it here, because I listen to music everyday.",
+			"details": "I listen to everything that has a good vibe and okay lyrics. And if the lyrics are great, I listen to it for a long time. But overall, I prefer rap, techno and rock."
+		},
+		"Random": {
+			"title": "Random skills",
+			"description": "Cubing, parkour, card tricks, juggling, stretching…",
+			"details": "When I see some cool skill and I got some time, I try to learn it. Some last longer, some shorter. I guess that depends on the interest of the people around me and the difficulty of said skill."
+		}
+	},
+	"tools": "Tools",
+	"projects": {
+		"poznavacka": {
+			"title": "Poznávačka Tool",
+			"description": "An app that helps students learn the names of animals, plants and other species.",
+			"what": "An app that makes interactive quizes and lists out of image sets, so that students can learn the names of the plants, animals and other species displayed on the images faster. Classic interactive and customizable dashboard UI.",
+			"why": "The first time my class was assigned to learn the names of 150 plant species, I thought I could simplify the learning process with my web development skills - so I created this app. Over the years, it has evolved as my skills grew. I also introduced it to other classes and teachers in my school and because of that, over 100 students use or have used this app to make the learning process faster, easier and more fun.",
+			"issues": "The app doesn’t have a backend. It saves some progress and settings in local storage, but login system with authentication would be much better here. The problem is that good backend hosting costs money and the app is not monetized."
+		},
+		"domacnostHrou": {
+			"title": "Domácnost hrou",
+			"description": "A portfolio/e-commerce type website focused on selling my client and a brand they’re working for.",
+			"what": "The website acts mostly as a portfolio for my mom, who works for a company that has affiliate marketing model. The website is trying to introduce and sell my mom’s services and the products of the company or their brand as a whole.",
+			"why": "At first, my mom needed the website just for verification on some other service she used. So the first version was not made by me and was not maintained. A few years ago, I decided to rewrite the entire thing in React as a practice and later updated the design multiple times (even created a logo). My mom then started using my version of the website, because it looked and worked so much better.",
+			"issues": "The marketing could be a lot better. Even though the site looks good, I’m aware that there is not a straight-forward funnel. But right now, the site serves its purpose in its current state and I’m looking more into coding and design rather than marketing."
+		},
+		"whyTitle": "Why?",
+		"issuesTitle": "Known issues",
+		"seeMore": "See more",
+		"goToPage": "Go to the page"
+	},
+	"contact": {
+		"paragraph": "Want to work with me? Just fill out this form and I'll get back to you as soon as possible. Or you can write me an email.",
+		"name": "Your Name",
+		"email": "Your Email",
+		"message": "Your Message (optional)",
+		"CTA": "Send!"
+	},
+	"license": "All rights reserved."
 }

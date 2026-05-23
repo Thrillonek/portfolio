@@ -28,7 +28,7 @@ export function ProjectCard({ title, description, image, tags, link }: ProjectCa
 						</span>
 					))}
 				</div>
-				<div className='flex flex-wrap gap-2'>
+				<div style={{ marginTop: 'auto' }} className='flex flex-wrap gap-2'>
 					<button id={title} className='button'>
 						See more
 					</button>

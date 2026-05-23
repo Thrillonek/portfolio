@@ -47,7 +47,7 @@ export default function OtherHobbies() {
 
 	return (
 		<div className={'bg-darker relative p-8 border border-gray rounded-2xl h-fit layout-col-4'}>
-			<h3>My other hobbies</h3>
+			<h3>{t('otherHobbies.title')}</h3>
 			<div data-visible={isHobbyInfoVisible} className={classes['hobby-info']}>
 				<HobbyInfo activeHobby={activeHobby} />
 			</div>
@@ -57,8 +57,8 @@ export default function OtherHobbies() {
 				</Modal>
 			))}
 			<div className='gap-4 grid 2xl:grid-cols-2'>
-				<HobbyCard title={t('otherHobbies.Math.title')} description={t('otherHobbies.Math.description')} icon='mingcute:barbell-line' />
-				<HobbyCard title={t('otherHobbies.Calisthenics.title')} description={t('otherHobbies.Calisthenics.description')} icon='mynaui:math-square' />
+				<HobbyCard title={t('otherHobbies.Calisthenics.title')} description={t('otherHobbies.Calisthenics.description')} icon='mingcute:barbell-line' />
+				<HobbyCard title={t('otherHobbies.Math.title')} description={t('otherHobbies.Math.description')} icon='mynaui:math-square' />
 				<HobbyCard title={t('otherHobbies.Music.title')} description={t('otherHobbies.Music.description')} icon='mingcute:music-line' />
 				<HobbyCard title={t('otherHobbies.Random.title')} description={t('otherHobbies.Random.description')} icon='mingcute:flash-line' />
 			</div>

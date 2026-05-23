@@ -8,18 +8,18 @@ import ProjectModal from './ProjectModal';
 type ProjectCardProps = {
 	title: string;
 	description: string;
-	image: StaticImageData;
+	images: StaticImageData[];
 	tags: string[];
 	link: string;
 };
 
-export function ProjectCard({ title, description, image, tags, link }: ProjectCardProps) {
+export function ProjectCard({ title, description, images, tags, link }: ProjectCardProps) {
 	const t = useTranslations();
 
 	return (
 		<>
 			<div className='bg-darker p-4 border border-gray rounded-lg w-md max-w-full layout-col-4'>
-				<Image src={image} alt={'Obrázek projektu ' + title} className='rounded-lg w-full h-auto object-contain shrink-0' />
+				<Image src={images[0]} alt={'Obrázek projektu ' + title} className='rounded-lg w-full h-auto object-contain shrink-0' />
 				<div className='layout-col-1'>
 					<h4>{title}</h4>
 					<p>{description}</p>

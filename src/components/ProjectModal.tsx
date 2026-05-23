@@ -34,7 +34,14 @@ export default function ProjectModal({ name }: { name: keyof typeof projects }) 
 			<div className='grid md:grid-cols-2'>
 				<div className='p-4 layout-col-4'>
 					<h2>{name}</h2>
-					<p>{projects[name].description}</p>
+					<p>{t(`projects.${translationProjectNames[name]}.what`)}</p>
+					<div className='flex gap-1'>
+						{projects[name].tags.map((tag) => (
+							<span key={tag} className='bg-dark shadow px-2 py-1 rounded-full text-light-gray text-xs'>
+								{tag}
+							</span>
+						))}
+					</div>
 					<Link href={projects[name].link} className='w-fit button secondary' target='_blank' rel='noopener noreferrer'>
 						{t('projects.goToPage')}
 					</Link>

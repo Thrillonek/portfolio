@@ -1,11 +1,13 @@
 import domacnostHrouImage from '@/public/domacnost-hrou.png';
 import poznavackaImage from '@/public/poznavacka.png';
-import ContactForm from '@/src/components/ContactForm';
+import ContactForm, { ContactModal } from '@/src/components/ContactForm';
 import EmailField from '@/src/components/EmailField';
 import Navbar from '@/src/components/Navbar';
 import OtherHobbies from '@/src/components/OtherHobbies';
 import { ProjectCard } from '@/src/components/ProjectCard';
+import ProjectModal from '@/src/components/ProjectModal';
 import SkillIcon from '@/src/components/SkillIcon';
+import { projects } from '@/src/data/projects';
 import { Icon } from '@iconify/react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
@@ -17,7 +19,11 @@ export default function Home() {
 
 	return (
 		<>
+			{Object.keys(projects).map((projectName) => (
+				<ProjectModal key={projectName} name={projectName as keyof typeof projects} />
+			))}
 			<Navbar />
+			<ContactModal />
 			<main className='flex flex-col flex-1 items-center gap-16 bg-black text-white'>
 				<section id='hero' className='justify-center items-center pt-40 w-[min(90vw,800px)]'>
 					<h1 className='text-center'>Jindřich Kraina</h1>

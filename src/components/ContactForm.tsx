@@ -32,13 +32,18 @@ export default function ContactForm() {
 					{t('contact.CTA')}
 				</button>
 			</form>
-			<Modal title='Message Sent' name='emailSent' className='items-center text-center layout-col-2'>
-				<div className='place-items-center grid bg-lime-500/15 rounded-full w-20 aspect-square'>
-					<Icon className='text-lime-500 text-4xl' icon='mingcute:check-line' />
-				</div>
-				<h2>Success!</h2>
-				<p>Your message has been sent! Thank you for reaching out to me.</p>
-			</Modal>
 		</>
+	);
+}
+
+export function ContactModal() {
+	return (
+		<Modal title='Message Sent' name='emailSent' className='items-center text-center layout-col-2'>
+			<div className='place-items-center grid bg-lime-500/15 rounded-full w-20 aspect-square'>
+				<Icon className='text-lime-500 text-4xl' icon='mingcute:check-line' />
+			</div>
+			<h2>Success!</h2>
+			<p>Your message has been sent! Thank you for reaching out to me.</p>
+		</Modal>
 	);
 }

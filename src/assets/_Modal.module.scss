@@ -2,7 +2,7 @@
 	position: fixed;
 	inset: 0;
 	background-color: rgba(0, 0, 0, 0.5);
-	z-index: 1000;
+	z-index: 10000;
 
 	display: flex;
 	justify-content: center;
@@ -34,6 +34,7 @@
 
 		& > *:first-child {
 			font-weight: 700;
+			color: var(--white);
 		}
 
 		& > button {
@@ -44,6 +45,14 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			border-radius: 50%;
+
+			transition: all 0.2s ease;
+
+			&:hover {
+				background-color: oklch(0.33 0 0);
+				box-shadow: 0 0 0 0.5rem oklch(0.33 0 0);
+			}
 		}
 	}
 
@@ -80,6 +89,7 @@
 			overflow: scroll;
 			padding: 1rem 0.5rem;
 			flex: 1 1 100%;
+			color: var(--white);
 		}
 	}
 }

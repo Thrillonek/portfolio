@@ -7,7 +7,7 @@
 		"navigation": "Navigation"
 	},
 	"hero": {
-		"description": "I use React and Node.js with some help of Figma to create elegant & accessible websites and other user interfaces. Although I’m still a student, I’ve made some big projects that people use and love.",
+		"description": "I use React and Next.js to create modern & accessible websites and other user interfaces. Although I’m still a student, I’ve made some big projects that people use and love.",
 		"location": "Havířov, Czech Republic",
 		"primaryCTA": "Contact me",
 		"secondaryCTA": "My projects"
@@ -72,9 +72,9 @@
 	},
 	"contact": {
 		"paragraph": "Want to work with me? Just fill out this form and I'll get back to you as soon as possible. Or you can write me an email.",
-		"name": "Your Name",
-		"email": "Your Email",
-		"message": "Your Message (optional)",
+		"name": "Name",
+		"email": "Email",
+		"message": "Your message (optional)",
 		"CTA": "Send!"
 	},
 	"license": "All rights reserved."

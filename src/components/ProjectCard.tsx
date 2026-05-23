@@ -2,6 +2,7 @@ import { Icon } from '@iconify/react';
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 
+import { useTranslations } from 'next-intl';
 import ProjectModal from './ProjectModal';
 
 type ProjectCardProps = {
@@ -13,6 +14,8 @@ type ProjectCardProps = {
 };
 
 export function ProjectCard({ title, description, image, tags, link }: ProjectCardProps) {
+	const t = useTranslations();
+
 	return (
 		<>
 			<div className='bg-darker p-4 border border-gray rounded-lg w-md max-w-full layout-col-4'>
@@ -30,15 +33,14 @@ export function ProjectCard({ title, description, image, tags, link }: ProjectCa
 				</div>
 				<div style={{ marginTop: 'auto' }} className='flex flex-wrap gap-2'>
 					<button id={title} className='button'>
-						See more
+						{t('projects.seeMore')}
 					</button>
 					<Link className='button secondary' href={link} target='_blank' rel='noopener noreferrer'>
-						<span>Go to the page</span>
+						<span>{t('projects.goToPage')}</span>
 						<Icon icon='mingcute:external-link-line' />
 					</Link>
 				</div>
 			</div>
-			<ProjectModal name={title as any} />
 		</>
 	);
 }

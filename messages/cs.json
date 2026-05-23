@@ -7,7 +7,7 @@
 		"navigation": "Navigace"
 	},
 	"hero": {
-		"description": "Používám React a Node.js s trochou pomocí Figmy pro tvorbu elegantních a přístupných webových stránek. I když jsem pořád studuji, mám za sebou pár velkých projektů, které lidi rádi používají.",
+		"description": "Používám React a Next.js pro tvorbu moderních a přístupných webových stránek. I když jsem pořád studuji, mám za sebou pár velkých projektů, které lidi rádi používají.",
 		"location": "Havířov, Česká republika",
 		"primaryCTA": "Kontaktujte me",
 		"secondaryCTA": "Moje projekty"
@@ -55,7 +55,7 @@
 			"title": "Poznávačka Tool",
 			"description": "Aplikace, která pomáhá studentům se naučit názvy zvířat, rostlin a dalších druhů.",
 			"what": "Aplikace, která vytváří interaktivní kvízy a seznamy ze souborů obrázků, aby se studenti mohli rychleji naučit názvy zvířat, rostliny a dalších druhů zobrazených na obrázcích. Klasické interaktivní a vysoce nastavitelné rozhraní.",
-			"why": "Poprvé, co jsme ve třídě dostali za úkol se naučit jména 150 druhů rostlin, jsem si řekl, že bych proces učení mohl zlehčit pomocí mých znalostí ve vývoji webu - a tak jsem vytvořil tuto aplikaci. V průběhu let jsem ji vylepšoval mezitím, co jsem se sám zlepšoval. Taky jsem ji ukázal ostatním třídám a učitelům v mojí škole, díky čemuž ji už použilo přes 100 studentů, aby si zjednodušili a zrychlili proces učení na test.",
+			"why": "Poprvé, co jsme ve třídě dostali za úkol se naučit jména 150 druhů rostlin, jsem si řekl, že bych proces učení mohl zlehčit pomocí mých znalostí ve vývoji webu - a tak jsem vytvořil tuto aplikaci. V průběhu let jsem se o dost zlepšil a s každou novou verzí přišlo vylepšení. Taky jsem ji ukázal ostatním třídám a učitelům v mojí škole, díky čemuž ji už použilo přes 100 studentů, aby si zjednodušili a zrychlili proces učení na test.",
 			"issues": "Aplikace nemá backend. Sice ukládá progres a nastavení do místního úložiště, ale systém přihlašování by se sem určitě hodil. Problém je, že hosting na dobrý backend by stál peníze a aplikace zpeněžněna není."
 		},
 		"domacnostHrou": {
@@ -63,7 +63,7 @@
 			"description": "Stránka typu osobní profil/elektronický obchod zaměřená na prodání mého klienta a značky, pro kterou pracuje.",
 			"what": "Stránka funguje hlavně jako osobní profil pro moji mamku, která pracuje pro firmu s marketingovým modelem získání provize za doporučení produktu. Stránka se snaží představit a prodat služby mojí mamky a produkty firmy či jejich celou značku",
 			"why": "Ze začátku moje mamka potřebovala stránku jen pro ověření na jiné službě, kterou používala. Takže první verzi jsem nedělal já a nebyla ani udržována. Před pár lety jsem se rozhodl, že to celé přepíšu do Reactu jako cvičení a později jsem několikrát aktualizoval design (a dokonce vytvořil logo). Moje mamka nakonec začala používat moji verzi, protože vypadala a fungovala o dost lépe.",
-			"issues": "Marketing by se dal zlepšit. I když stránka vypadá dobře, mám na vědomí, že nemá přesně daný způsob, jak zákazníka navést tam, kam chce. Momentálně ale stránka dělá to, co dělat má a já se spíše zajímám o kódování a design než marketing."
+			"issues": "Marketing by se dal zlepšit. I když stránka vypadá dobře, mám na vědomí, že nemá přesně daný způsob, jak zákazníka navést tam, kde ho potřebuje. Momentálně ale stránka dělá to, co dělat má a já se spíše zajímám o kódování a design než o marketing."
 		},
 		"whyTitle": "Proč?",
 		"issuesTitle": "Známé problémy",
@@ -72,9 +72,9 @@
 	},
 	"contact": {
 		"paragraph": "Máte zájem o spolupráci? Vyplňte tento formulář a já se k Vám dostanu hned, jak to bude možné. Nebo mi taky můžete napsat email.",
-		"name": "Vaše Jméno",
-		"email": "Vaše Email",
-		"message": "Vaše Zpráva (nepovinné)",
+		"name": "Jméno",
+		"email": "Email",
+		"message": "Vaše zpráva (nepovinné)",
 		"CTA": "Odeslat!"
 	},
 	"license": "Všechna práva vyhrazena."

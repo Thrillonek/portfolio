@@ -77,5 +77,9 @@
 		"message": "Your message (optional)",
 		"CTA": "Send!"
 	},
-	"license": "All rights reserved."
+	"license": "All rights reserved.",
+	"emailCopy": {
+		"hover": "Copy email",
+		"active": "Email copied!"
+	}
 }

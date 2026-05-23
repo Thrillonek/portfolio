@@ -2,6 +2,7 @@
 
 import classes from '@/src/assets/_EmailField.module.scss';
 import { Icon } from '@iconify/react';
+import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 
 const email = 'jindrich.kraina@gmail.com';
@@ -15,8 +16,10 @@ export default function EmailField() {
 		setTimeout(() => setCopied(false), 2000);
 	}
 
+	const t = useTranslations();
+
 	return (
-		<button data-tooltip={copied ? 'Email copied!' : 'Copy email'} onClick={copyEmail} className={classes.emailField}>
+		<button data-tooltip={copied ? t('emailCopy.active') : t('emailCopy.hover')} onClick={copyEmail} className={classes.emailField}>
 			<Icon className='text-accent text-xl' icon='mingcute:mail-line' />
 			<span>{email}</span>
 			<Icon className='text-light-gray' icon='mingcute:copy-2-line' />

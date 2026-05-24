@@ -4,7 +4,7 @@ import classes from '@/src/assets/_OtherHobbies.module.scss';
 import { Icon } from '@iconify/react';
 import { useTranslations } from 'next-intl';
 import { MouseEvent, useEffect, useState } from 'react';
-import { hobbies } from '../data/hobbies';
+import { hobbyIcons } from '../data/hobbies';
 import { useApplicationStore } from '../data/stores';
 import Modal from './ui/Modal';
 
@@ -24,7 +24,7 @@ export default function OtherHobbies() {
 			setIsHobbyInfoVisible(true);
 		}
 
-		Object.keys(hobbies).forEach((hobby) => {
+		Object.keys(hobbyIcons).forEach((hobby) => {
 			const element = document.querySelector(`[data-title="${hobby}"]`) as HTMLElement;
 			if (element) {
 				element.addEventListener('mouseenter', handleMouseEnter as any);
@@ -33,7 +33,7 @@ export default function OtherHobbies() {
 		});
 
 		return () => {
-			Object.keys(hobbies).forEach((hobby) => {
+			Object.keys(hobbyIcons).forEach((hobby) => {
 				const element = document.querySelector(`[data-title="${hobby}"]`) as HTMLElement;
 				if (element) {
 					element.removeEventListener('mouseenter', handleMouseEnter as any);
@@ -51,16 +51,16 @@ export default function OtherHobbies() {
 			<div data-visible={isHobbyInfoVisible} className={classes['hobby-info']}>
 				<HobbyInfo activeHobby={activeHobby} />
 			</div>
-			{Object.keys(hobbies).map((hobby, idx) => (
+			{Object.keys(hobbyIcons).map((hobby, idx) => (
 				<Modal key={idx} title='Hobby' name={hobby}>
 					<HobbyInfo activeHobby={hobby} />
 				</Modal>
 			))}
-			<div className='gap-4 grid 2xl:grid-cols-2'>
-				<HobbyCard title={t('otherHobbies.Calisthenics.title')} description={t('otherHobbies.Calisthenics.description')} icon='mingcute:barbell-line' />
-				<HobbyCard title={t('otherHobbies.Math.title')} description={t('otherHobbies.Math.description')} icon='mynaui:math-square' />
-				<HobbyCard title={t('otherHobbies.Music.title')} description={t('otherHobbies.Music.description')} icon='mingcute:music-line' />
-				<HobbyCard title={t('otherHobbies.Random.title')} description={t('otherHobbies.Random.description')} icon='mingcute:flash-line' />
+			<div className='gap-4 grid 2xl:grid-cols-2 hobby-list'>
+				<HobbyCard name='Calisthenics' title={t('otherHobbies.Calisthenics.title')} description={t('otherHobbies.Calisthenics.description')} icon={hobbyIcons.Calisthenics} />
+				<HobbyCard name='Math' title={t('otherHobbies.Math.title')} description={t('otherHobbies.Math.description')} icon={hobbyIcons.Math} />
+				<HobbyCard name='Music' title={t('otherHobbies.Music.title')} description={t('otherHobbies.Music.description')} icon={hobbyIcons.Music} />
+				<HobbyCard name='Random skills' title={t('otherHobbies.Random.title')} description={t('otherHobbies.Random.description')} icon={hobbyIcons['Random skills']} />
 			</div>
 		</div>
 	);
@@ -72,23 +72,23 @@ function HobbyInfo({ activeHobby }: { activeHobby: string | null }) {
 	return (
 		<>
 			<div className='flex items-center gap-4 mb-2'>
-				<div className='place-items-center grid rounded-full w-12 aspect-square bg-accent-muted'>{activeHobby && <Icon icon={hobbies[activeHobby as keyof typeof hobbies].icon} className='text-accent text-2xl' />}</div>
-				<h3>{activeHobby}</h3>
+				<div className='place-items-center grid rounded-full w-12 aspect-square bg-accent-muted'>{activeHobby && <Icon icon={hobbyIcons[activeHobby as keyof typeof hobbyIcons]} className='text-accent text-2xl' />}</div>
+				<h3>{t(`otherHobbies.${activeHobby?.split(' ')[0]}.title`)}</h3>
 			</div>
 			{activeHobby && <p>{t(`otherHobbies.${activeHobby.split(' ')[0]}.details`)}</p>}
 		</>
 	);
 }
 
-function HobbyCard({ title, description, icon }: HobbyCardProps) {
+function HobbyCard({ name, title, description, icon }: HobbyCardProps & { name: string }) {
 	const setActiveModal = useApplicationStore((state) => state.setActiveModal);
 
 	function handleClick() {
-		if (!window.matchMedia('(pointer: fine)').matches) setActiveModal(title);
+		if (!window.matchMedia('(pointer: fine)').matches) setActiveModal(name);
 	}
 
 	return (
-		<div data-title={title} onClick={handleClick} className='bg-dark shadow p-4 rounded-lg hobby-card layout-col-2'>
+		<div data-title={name} onClick={handleClick} className='bg-dark shadow p-4 rounded-lg hobby-card layout-col-2'>
 			<div className='flex justify-between items-center'>
 				<div className='flex items-center gap-2'>
 					<Icon icon={icon} className='text-accent text-2xl' />

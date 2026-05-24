@@ -69,15 +69,16 @@ export default function OtherHobbies() {
 function HobbyInfo({ activeHobby }: { activeHobby: string | null }) {
 	const t = useTranslations();
 
-	return (
-		<>
-			<div className='flex items-center gap-4 mb-2'>
-				<div className='place-items-center grid rounded-full w-12 aspect-square bg-accent-muted'>{activeHobby && <Icon icon={hobbyIcons[activeHobby as keyof typeof hobbyIcons]} className='text-accent text-2xl' />}</div>
-				<h3>{t(`otherHobbies.${activeHobby?.split(' ')[0]}.title`)}</h3>
-			</div>
-			{activeHobby && <p>{t(`otherHobbies.${activeHobby.split(' ')[0]}.details`)}</p>}
-		</>
-	);
+	if (activeHobby)
+		return (
+			<>
+				<div className='flex items-center gap-4 mb-2'>
+					<div className='place-items-center grid rounded-full w-12 aspect-square bg-accent-muted'>{activeHobby && <Icon icon={hobbyIcons[activeHobby as keyof typeof hobbyIcons]} className='text-accent text-2xl' />}</div>
+					<h3>{t(`otherHobbies.${activeHobby.split(' ')[0]}.title`)}</h3>
+				</div>
+				<p>{t(`otherHobbies.${activeHobby.split(' ')[0]}.details`)}</p>
+			</>
+		);
 }
 
 function HobbyCard({ name, title, description, icon }: HobbyCardProps & { name: string }) {

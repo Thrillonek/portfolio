@@ -60,9 +60,9 @@
 		},
 		"domacnostHrou": {
 			"title": "Domácnost hrou",
-			"description": "Stránka typu osobní profil/elektronický obchod zaměřená na prodání mého klienta a značky, pro kterou pracuje.",
-			"what": "Stránka funguje hlavně jako osobní profil pro moji mamku, která pracuje pro firmu s marketingovým modelem získání provize za doporučení produktu. Stránka se snaží představit a prodat služby mojí mamky a produkty firmy či jejich celou značku",
-			"why": "Ze začátku moje mamka potřebovala stránku jen pro ověření na jiné službě, kterou používala. Takže první verzi jsem nedělal já a nebyla ani udržována. Před pár lety jsem se rozhodl, že to celé přepíšu do Reactu jako cvičení a později jsem několikrát aktualizoval design (a dokonce vytvořil logo). Moje mamka nakonec začala používat moji verzi, protože vypadala a fungovala o dost lépe.",
+			"description": "Stránka poradce Eurona Magdy Krainové (mojí mamky). Slouží k představení klienta a jeho služeb.",
+			"what": "Stránka má za úkol představit moji mamku a její služby a také navést návštěvníky ke spolupráci. Navíc obsahuje hodně informací o Euroně - firmě, od které mamka prodává produkty.",
+			"why": "Ze začátku moje mamka potřebovala tuto stránku jen pro ověření na jiné službě, kterou používala. Takže první verzi jsem nedělal já a nebyla ani udržována. Před pár lety jsem se rozhodl, že celou stránku přepíšu do Reactu jako cvičení a později jsem několikrát aktualizoval design (a dokonce vytvořil logo). Moje mamka nakonec začala používat moji verzi, protože vypadala a fungovala o dost lépe.",
 			"issues": "Marketing by se dal zlepšit. I když stránka vypadá dobře, mám na vědomí, že nemá přesně daný způsob, jak zákazníka navést tam, kde ho potřebuje. Momentálně ale stránka dělá to, co dělat má a já se spíše zajímám o kódování a design než o marketing."
 		},
 		"whyTitle": "Proč?",

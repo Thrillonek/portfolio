@@ -60,8 +60,8 @@
 		},
 		"domacnostHrou": {
 			"title": "Domácnost hrou",
-			"description": "A portfolio/e-commerce type website focused on selling my client and a brand they’re working for.",
-			"what": "The website acts mostly as a portfolio for my mom, who works for a company that has affiliate marketing model. The website is trying to introduce and sell my mom’s services and the products of the company or their brand as a whole.",
+			"description": "Magda Krainová's (my mom's) Eurona consultant's website. Serves to introduce the client and her services.",
+			"what": "The website is supposed to introduce my mom and her services as well as lead visitors to working with her. It also contains a lot of information about Eurona - the company she sells products for.",
 			"why": "At first, my mom needed the website just for verification on some other service she used. So the first version was not made by me and was not maintained. A few years ago, I decided to rewrite the entire thing in React as a practice and later updated the design multiple times (even created a logo). My mom then started using my version of the website, because it looked and worked so much better.",
 			"issues": "The marketing could be a lot better. Even though the site looks good, I’m aware that there is not a straight-forward funnel. But right now, the site serves its purpose in its current state and I’m looking more into coding and design rather than marketing."
 		},

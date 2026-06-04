@@ -1,12 +1,17 @@
 import domacnostHrouImage1 from '@/public/domacnost-hrou.png';
-import poznavackaImage1 from '@/public/poznavacka.png';
+import poznavackaImage1 from '@/public/poznavacka/Poznavacka1.png';
+import poznavackaImage2 from '@/public/poznavacka/Poznavacka2.png';
+import poznavackaImage3 from '@/public/poznavacka/Poznavacka3.png';
+import poznavackaImage4 from '@/public/poznavacka/Poznavacka4.png';
+import poznavackaImage5 from '@/public/poznavacka/Poznavacka5.png';
+import poznavackaImage6 from '@/public/poznavacka/Poznavacka6.png';
 
 export const projects = {
 	'Poznávačka Tool': {
 		link: 'https://poznavacka.netlify.app',
 		tags: ['TypeScript', 'React', 'Tailwind CSS', 'SCSS'],
 		translationAlias: 'poznavacka',
-		images: [poznavackaImage1],
+		images: [poznavackaImage1, poznavackaImage2, poznavackaImage3, poznavackaImage4, poznavackaImage5, poznavackaImage6],
 	},
 	'Domácnost hrou': {
 		link: 'https://domacnosthrou.cz',

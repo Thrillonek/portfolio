@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { useEffect } from 'react';
 import { projects } from '../data/projects';
 import { useApplicationStore } from '../data/stores';
+import Carousel from './ui/Carousel';
 import Modal from './ui/Modal';
 
 export default function ProjectModal({ name }: { name: keyof typeof projects }) {
@@ -43,9 +44,7 @@ export default function ProjectModal({ name }: { name: keyof typeof projects }) 
 							</span>
 						))}
 					</div>
-					{projects[name].images.map((image, idx) => {
-						return <Image key={idx} src={image} alt={name} className='rounded-lg' />;
-					})}
+					<Carousel images={projects[name].images} />
 					<Link href={projects[name].link} className='w-fit button secondary' target='_blank' rel='noopener noreferrer'>
 						{t('projects.goToPage')}
 					</Link>

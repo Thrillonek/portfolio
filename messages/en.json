@@ -68,7 +68,8 @@
 		"whyTitle": "Why?",
 		"issuesTitle": "Known issues",
 		"seeMore": "See more",
-		"goToPage": "Go to the page"
+		"goToPage": "Go to the page",
+		"altImage": "Project image"
 	},
 	"contact": {
 		"paragraph": "Want to work with me? Just fill out this form and I'll get back to you as soon as possible. Or you can write me an email.",

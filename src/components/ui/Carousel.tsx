@@ -3,7 +3,7 @@
 import { Icon } from '@iconify/react';
 import { useTranslations } from 'next-intl';
 import Image, { StaticImageData } from 'next/image';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function Carousel({ images }: { images: StaticImageData[] }) {
 	const [currentIndex, setCurrentIndex] = useState(0);
@@ -16,7 +16,7 @@ export default function Carousel({ images }: { images: StaticImageData[] }) {
 		const duration = 300;
 
 		if (side === 'left') {
-			setCurrentIndex((prev) => (prev === 0 ? images.length : prev - 1));
+			setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
 		} else {
 			setCurrentIndex((prev) => (prev + 1) % images.length);
 		}

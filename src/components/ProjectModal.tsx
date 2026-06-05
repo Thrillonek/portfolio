@@ -33,7 +33,7 @@ export default function ProjectModal({ name }: { name: keyof typeof projects }) 
 
 	return (
 		<Modal name={name} title='Project details'>
-			<div className='w-2xl'>
+			<div className='max-w-3xl'>
 				<div className='p-4 layout-col-4'>
 					<h2>{name}</h2>
 					<p>{t(`projects.${translationProjectNames[name]}.what`)}</p>

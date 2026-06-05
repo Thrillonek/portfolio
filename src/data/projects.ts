@@ -9,7 +9,7 @@ import poznavackaImage6 from '@/public/poznavacka/Poznavacka6.png';
 export const projects = {
 	'Poznávačka Tool': {
 		link: 'https://poznavacka.netlify.app',
-		tags: ['TypeScript', 'React', 'Tailwind CSS', 'SCSS'],
+		tags: ['TypeScript', 'React', 'Tailwind CSS', 'SCSS', 'Next.js'],
 		translationAlias: 'poznavacka',
 		images: [poznavackaImage1, poznavackaImage2, poznavackaImage3, poznavackaImage4, poznavackaImage5, poznavackaImage6],
 	},

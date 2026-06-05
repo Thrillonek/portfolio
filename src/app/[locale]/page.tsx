@@ -24,8 +24,9 @@ export default function Home() {
 			))}
 			<Navbar />
 			<ContactModal />
-			<main className='flex flex-col flex-1 items-center gap-16 bg-black text-white'>
-				<section id='hero' className='justify-center items-center pt-40 w-[min(90vw,800px)]'>
+			<main className='flex flex-col flex-1 items-stretch gap-16 text-white'>
+				<div className='texture-bg'></div>
+				<section id='hero' className='justify-center items-center mx-auto pt-40 w-[min(90vw,800px)]'>
 					<h1 className='text-center'>Jindřich Kraina</h1>
 					<div className='bg-accent rounded w-12 h-1' />
 					<h4 className='text-center'>Full-stack developer & UI/UX designer</h4>
@@ -139,7 +140,7 @@ export default function Home() {
 				</section>
 			</main>
 			<footer className='items-center bg-darker shadow-2xl text-white layout-col-0'>
-				<section className='gap-y-16 grid md:grid-cols-2 lg:grid-cols-3'>
+				<section className='gap-y-16 grid md:grid-cols-2 lg:grid-cols-3 w-full'>
 					<div className='md:col-span-2 lg:col-span-1 layout-col-2'>
 						<Image src={iconSvg} width={64} alt='Jindřich Kraina' />
 						<h3>Jindřich Kraina</h3>

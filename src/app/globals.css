@@ -4,11 +4,12 @@
 	--black: oklch(0.1797 0.0043 308.19);
 	--darker: oklch(0.2115 0.006 301.03);
 	--dark: oklch(0.27 0.0117 300.71);
-	--gray: oklch(0.3963 0.0251 285.2);
+	--gray: oklch(0.37 0.0251 285.2);
 	--light-gray: oklch(1 0 300.71 / 0.75);
 	--white: oklch(1 0 300.71 / 0.9);
 	--accent: oklch(0.558 0.222 277.85);
-	--accent-muted: oklch(0.558 0.222 277.85 / 0.2);
+	--accent-muted: oklch(0.358 0.12 277.85 / 0.5);
+	/* oklch(0.2373 0.0582 282.47) */
 }
 
 @theme inline {
@@ -59,11 +60,10 @@
 	}
 
 	section {
-		width: min(90vw, 1500px);
 		display: flex;
 		flex-direction: column;
 		row-gap: 1rem;
-		padding: 4rem 0;
+		padding: 4rem max(5vw, calc((100vw - 1500px) / 2));
 	}
 
 	button {

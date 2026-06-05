@@ -4,7 +4,7 @@ import { useAddEventListener } from '@/src/hooks/useAddEventListener';
 import { Icon } from '@iconify/react';
 import { useTranslations } from 'next-intl';
 import Image, { StaticImageData } from 'next/image';
-import { useEffect, useRef, useState, type TouchEvent } from 'react';
+import { useEffect, useRef, useState, type MouseEvent, type PointerEvent } from 'react';
 
 function animate(element: HTMLElement, keyframes: Keyframe[] | PropertyIndexedKeyframes, options: KeyframeAnimationOptions) {
 	let anim = element.animate(keyframes, options);
@@ -21,9 +21,11 @@ export default function Carousel({ images }: { images: StaticImageData[] }) {
 
 	const carouselRef = useRef<HTMLDivElement>(null);
 	const startParamsRef = useRef<{ pos: number; time?: number }>({ pos: 0, time: undefined });
+	const isCarouselLockedRef = useRef(true);
 	const currentOffsetRef = useRef(0);
 
-	function changeImage(side: 'left' | 'right') {
+	function changeImage(side: 'left' | 'right', e?: MouseEvent) {
+		if (e) e.stopPropagation();
 		const duration = 300;
 
 		if (!carouselRef.current) return;
@@ -35,38 +37,46 @@ export default function Carousel({ images }: { images: StaticImageData[] }) {
 		}
 
 		animate(carouselRef.current, { transform: `translateX(calc(${100 * (side === 'left' ? -1 : 1)}% + ${currentOffsetRef.current}px))` }, { duration: 0, fill: 'forwards' });
-		animate(carouselRef.current, { transform: `translateX(0)` }, { duration, easing: currentOffsetRef.current === 0 ? 'ease-in-out' : 'ease-out', fill: 'forwards' });
+		animate(carouselRef.current, { transform: `translateX(0)` }, { duration, easing: currentOffsetRef.current === 0 ? 'ease' : 'ease-out', fill: 'forwards' });
 	}
 
-	function handleMouseMove(e: TouchEvent, startParams: { pos: number; time?: number }) {
+	function handleMouseMove(e: PointerEvent, startParams: { pos: number; time?: number }) {
 		if (!carouselRef.current || !startParams.time) return;
 
-		currentOffsetRef.current = e.touches[0].clientX - startParams.pos;
-		carouselRef.current.style.transform = `translateX(${currentOffsetRef.current}px)`;
+		currentOffsetRef.current = e.clientX - startParams.pos;
+
+		if (Math.abs(currentOffsetRef.current) > 20) {
+			isCarouselLockedRef.current = false;
+		}
+
+		if (!isCarouselLockedRef.current) {
+			carouselRef.current.style.transform = `translateX(${currentOffsetRef.current}px)`;
+		}
 	}
 
-	useAddEventListener('touchmove', (e) => handleMouseMove(e, startParamsRef.current), [startParamsRef.current]);
-	useAddEventListener('touchend', () => {
+	useAddEventListener('pointermove', (e) => handleMouseMove(e, startParamsRef.current), [startParamsRef.current]);
+	useAddEventListener('pointerup', () => {
 		if (carouselRef.current) {
-			const isActionFast = Date.now() - startParamsRef.current.time! < 100;
-			if (currentOffsetRef.current > carouselRef.current.clientWidth / 2.5 || (currentOffsetRef.current > 0 && isActionFast)) {
+			const isActionFast = Date.now() - startParamsRef.current.time! < 200;
+			if (currentOffsetRef.current > carouselRef.current.clientWidth / 3.3 || (currentOffsetRef.current > 0 && isActionFast)) {
 				changeImage('left');
-			} else if (currentOffsetRef.current < carouselRef.current.clientWidth / -2.5 || (currentOffsetRef.current < 0 && isActionFast)) {
+			} else if (currentOffsetRef.current < carouselRef.current.clientWidth / -3.3 || (currentOffsetRef.current < 0 && isActionFast)) {
 				changeImage('right');
-			} else {
-				animate(carouselRef.current, { transform: `translateX(0)` }, { duration: 300, easing: 'ease-in-out', fill: 'forwards' });
+			} else if (currentOffsetRef.current !== 0) {
+				animate(carouselRef.current, { transform: `translateX(0)` }, { duration: 150, easing: 'ease', fill: 'forwards' });
 			}
 		}
 		startParamsRef.current = { pos: 0, time: undefined };
+		isCarouselLockedRef.current = true;
 		currentOffsetRef.current = 0;
 	});
 
 	return (
-		<div onTouchStart={(e) => (startParamsRef.current = { pos: e.touches[0].clientX, time: Date.now() })} className='relative flex items-center rounded-lg w-full h-full overflow-hidden select-none'>
-			<button onClick={() => changeImage('left')} className='left-2 z-10 absolute bg-neutral-700/50 hover:bg-neutral-700/75 p-1 rounded-full transition-colors'>
+		<div onPointerDown={(e) => (startParamsRef.current = { pos: e.clientX, time: Date.now() })} className='relative flex items-center rounded-lg w-full h-full overflow-hidden cursor-grab active:cursor-grabbing select-none'>
+			<button onClick={(e) => changeImage('left', e)} className='left-2 z-10 absolute bg-neutral-700/50 hover:bg-neutral-700/75 p-1 rounded-full transition-colors'>
 				<Icon icon='mdi:chevron-left' className='text-3xl' />
 			</button>
-			<button onClick={() => changeImage('right')} className='right-2 z-10 absolute bg-neutral-700/50 hover:bg-neutral-700/75 p-1 rounded-full transition-colors'>
+			<button onClick={(e) => changeImage('right', e)} className='right-2 z-10 absolute bg-neutral-700/50 hover:bg-neutral-700/75 p-1 rounded-full transition-colors'>
 				<Icon icon='mdi:chevron-right' className='text-3xl' />
 			</button>
 			<div ref={carouselRef} style={{ aspectRatio: `${images[0].width} / ${images[0].height}` }} className='relative flex w-full'>

@@ -40,10 +40,10 @@ export default function Carousel({ images }: { images: StaticImageData[] }) {
 		animate(carouselRef.current, { transform: `translateX(0)` }, { duration, easing: currentOffsetRef.current === 0 ? 'ease' : 'ease-out', fill: 'forwards' });
 	}
 
-	function handleMouseMove(e: PointerEvent, startParams: { pos: number; time?: number }) {
+	function handleMouseMove(e: any, startParams: { pos: number; time?: number }) {
 		if (!carouselRef.current || !startParams.time) return;
 
-		currentOffsetRef.current = e.clientX - startParams.pos;
+		currentOffsetRef.current = (e.touches ? e.touches[0].clientX : e.clientX) - startParams.pos;
 
 		if (Math.abs(currentOffsetRef.current) > 20) {
 			isCarouselLockedRef.current = false;
@@ -72,7 +72,7 @@ export default function Carousel({ images }: { images: StaticImageData[] }) {
 	});
 
 	return (
-		<div onPointerDown={(e) => (startParamsRef.current = { pos: e.clientX, time: Date.now() })} className='relative flex items-center rounded-lg w-full h-full overflow-hidden cursor-grab active:cursor-grabbing select-none'>
+		<div onPointerDown={(e: any) => (startParamsRef.current = { pos: e.touches ? e.touches[0].clientX : e.clientX, time: Date.now() })} className='relative flex items-center rounded-lg w-full h-full overflow-hidden cursor-grab active:cursor-grabbing select-none'>
 			<button onClick={(e) => changeImage('left', e)} className='left-2 z-10 absolute bg-neutral-700/50 hover:bg-neutral-700/75 p-1 rounded-full transition-colors'>
 				<Icon icon='mdi:chevron-left' className='text-3xl' />
 			</button>

@@ -79,10 +79,10 @@ export default function Carousel({ images }: { images: StaticImageData[] }) {
 			<button onClick={(e) => changeImage('right', e)} className='right-2 z-10 absolute bg-neutral-700/50 hover:bg-neutral-700/75 p-1 rounded-full transition-colors'>
 				<Icon icon='mdi:chevron-right' className='text-3xl' />
 			</button>
-			<div ref={carouselRef} style={{ aspectRatio: `${images[0].width} / ${images[0].height}` }} className='relative flex w-full'>
+			<div ref={carouselRef} style={{ aspectRatio: `${images[0].width} / ${images[0].height}` }} className='relative flex gap-2 w-full'>
 				{Array.from({ length: 3 }, (_, idx) => idx - 1).map((idx) => {
 					const image = images[(currentIndex + idx + images.length) % images.length];
-					return <Image style={{ left: `${idx * 100}%` }} key={idx} className='absolute inset-0 object-cover pointer-events-none' src={image} alt={t('projects.altImage')} />;
+					return <Image style={{ left: `${idx * 100}%` }} key={idx} className='absolute inset-0 rounded-lg object-cover pointer-events-none' src={image} alt={t('projects.altImage')} />;
 				})}
 			</div>
 		</div>

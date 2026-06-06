@@ -17,7 +17,7 @@ nav {
 		width: fit-content;
 		position: relative;
 
-		&::after {
+		&:not(:has(svg))::after {
 			content: '';
 			position: absolute;
 			width: 100%;

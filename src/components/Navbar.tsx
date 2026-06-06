@@ -51,7 +51,7 @@ export default function Navbar() {
 					<Link href='#projects'>{t('nav.projects')}</Link>
 					<Link href='#contact'>{t('nav.contact')}</Link>
 				</div>
-				<Link href={`/${params.locale === 'cs' ? 'en' : 'cs'}`} scroll={false} className='flex items-center gap-1 px-2 py-1 rounded text-white hover:text-accent transition-colors hover:bg-accent-muted'>
+				<Link href={`/${params.locale === 'cs' ? 'en' : 'cs'}`} scroll={false} className='flex items-center gap-1 px-2 py-1 rounded text-white! hover:text-accent! transition-colors hover:bg-accent-muted'>
 					<Icon icon='mdi:language' />
 					<span className='text-sm'>{params.locale.toUpperCase()}</span>
 				</Link>

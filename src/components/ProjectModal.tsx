@@ -49,7 +49,7 @@ export default function ProjectModal({ name }: { name: keyof typeof projects }) 
 						{t('projects.goToPage')}
 					</Link>
 				</div>
-				<div className='p-4 layout-col-4'>
+				<div className='p-4 layout-col-2'>
 					<h5 className='font-bold'>{t('projects.whyTitle')}</h5>
 					<p>{t(`projects.${translationProjectNames[name]}.why`)}</p>
 				</div>

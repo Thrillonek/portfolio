@@ -100,7 +100,7 @@ export default function Home() {
 						</svg>
 					</div>
 					<h2 className='text-center'>{t('nav.skills')}</h2>
-					<div className='gap-8 grid grid-flow-col auto-cols-fr'>
+					<div className='gap-8 grid md:grid-flow-col auto-cols-fr'>
 						<div className='items-center bg-darker px-8 py-4 border border-gray rounded-xl layout-col-4'>
 							<h3 style={{ textDecoration: 'underline 4px var(--accent)' }} className='text-center'>
 								Frontend
@@ -140,7 +140,8 @@ export default function Home() {
 				</section>
 				<section id='projects' className='items-center bg-black'>
 					<h2 className='text-center'>{t('nav.projects')}</h2>
-					<div className='flex flex-wrap justify-center gap-4 w-full'>
+					<div className='relative flex flex-wrap justify-center gap-4 w-full'>
+						<div style={{ background: 'radial-gradient(closest-side, oklch(from var(--accent) l c h / .5), transparent)' }} className='absolute h-full aspect-square scale-150'></div>
 						{Object.entries(projects).map(([projectName, project], idx) => (
 							<ProjectCard key={idx} title={projectName} description={t(`projects.${project.translationAlias}.description`)} tags={project.tags} link={project.link} images={project.images} />
 						))}

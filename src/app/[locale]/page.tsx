@@ -24,17 +24,21 @@ export default function Home() {
 			))}
 			<Navbar />
 			<ContactModal />
-			<main className='flex flex-col flex-1 items-stretch gap-16 text-white'>
+			<main className='flex flex-col flex-1 items-stretch text-white'>
 				<div className='texture-bg'></div>
-				<section id='hero' className='justify-center items-center mx-auto pt-40 w-[min(90vw,800px)]'>
-					<h1 className='text-center'>Jindřich Kraina</h1>
-					<div className='bg-accent rounded w-12 h-1' />
-					<h4 className='text-center'>Full-stack developer & UI/UX designer</h4>
-					<p className='text-center'>{t('hero.description')}</p>
-					<p className='flex items-center gap-2'>
-						<Icon icon='mingcute:location-fill' className='text-accent text-xl' />
-						<span>{t('hero.location')}</span>
-					</p>
+				<section id='hero' className='justify-center items-center mx-auto pt-40 w-[min(90vw,800px)] layout-col-12'>
+					<div className='items-center layout-col-2'>
+						<h1 className='text-center'>Jindřich Kraina</h1>
+						<div className='bg-accent rounded w-12 h-1' />
+						<h4 className='text-center'>Full-stack developer & UI/UX designer</h4>
+					</div>
+					<div className='items-center layout-col-2'>
+						<p className='text-center'>{t('hero.description')}</p>
+						<p className='flex items-center gap-2'>
+							<Icon icon='mingcute:location-fill' className='text-accent text-xl' />
+							<span>{t('hero.location')}</span>
+						</p>
+					</div>
 					<div className='flex flex-wrap justify-center gap-4'>
 						<Link className='button' href='#contact'>
 							{t('hero.primaryCTA')}
@@ -52,11 +56,11 @@ export default function Home() {
 							<p>{t('about.description2')}</p>
 							<div className='flex gap-2'>
 								<div className='p-4 rounded-2xl bg-accent-muted layout-col-2'>
-									<h3 className='text-accent'>3+</h3>
+									<h3 className='m-0 text-accent'>3+</h3>
 									<p>{t('about.yearsOfExperience')}</p>
 								</div>
 								<div className='p-4 rounded-2xl bg-accent-muted layout-col-2'>
-									<h3 className='text-accent'>2</h3>
+									<h3 className='m-0 text-accent'>2</h3>
 									<p>{t('about.largeProjects')}</p>
 								</div>
 							</div>
@@ -132,11 +136,15 @@ export default function Home() {
 						))}
 					</div>
 				</section>
-				<section id='contact' className='items-center'>
-					<h2 className='text-center'>{t('nav.contact')}</h2>
-					<p className='text-center'>{t('contact.paragraph')}</p>
-					<EmailField />
-					<ContactForm />
+				<section id='contact' className='items-center bg-black layout-col-8'>
+					<div className='layout-col-0'>
+						<h2 className='text-center'>{t('nav.contact')}</h2>
+						<p className='text-center'>{t('contact.paragraph')}</p>
+					</div>
+					<div className='items-center layout-col-2'>
+						<ContactForm />
+						<EmailField />
+					</div>
 				</section>
 			</main>
 			<footer className='items-center bg-darker shadow-2xl text-white layout-col-0'>

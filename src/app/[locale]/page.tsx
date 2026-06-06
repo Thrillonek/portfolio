@@ -1,13 +1,13 @@
-import domacnostHrouImage from '@/public/domacnost-hrou.png';
-import poznavackaImage from '@/public/poznavacka.png';
 import ContactForm, { ContactModal } from '@/src/components/ContactForm';
 import EmailField from '@/src/components/EmailField';
 import Navbar from '@/src/components/Navbar';
 import OtherHobbies from '@/src/components/OtherHobbies';
-import { ProjectCard } from '@/src/components/ProjectCard';
-import ProjectModal from '@/src/components/ProjectModal';
+import { ProjectCard } from '@/src/components/projects/ProjectCard';
+import ProjectMenu from '@/src/components/projects/ProjectMenu';
+import ProjectModal from '@/src/components/projects/ProjectModal';
 import SkillIcon from '@/src/components/SkillIcon';
 import { projects } from '@/src/data/projects';
+import { useAddObserver } from '@/src/hooks/useAddObserver';
 import { Icon } from '@iconify/react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
@@ -91,12 +91,12 @@ export default function Home() {
 				<section id='skills' className='items-center bg-black'>
 					<div className='bottom-full left-0 absolute w-1/2'>
 						<svg viewBox='0 0 250 250' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'>
-							<polygon points='0,250 250,250 0,225' fill='#121113' stroke-width='4' />
+							<polygon points='0,250 250,250 0,225' fill='#121113' strokeWidth='4' />
 						</svg>
 					</div>
 					<div className='right-0 bottom-full absolute w-1/2'>
 						<svg viewBox='0 0 250 250' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'>
-							<polygon points='0,250 250,250 250,225' fill='#121113' stroke-width='4' />
+							<polygon points='0,250 250,250 250,225' fill='#121113' strokeWidth='4' />
 						</svg>
 					</div>
 					<h2 className='text-center'>{t('nav.skills')}</h2>
@@ -140,12 +140,7 @@ export default function Home() {
 				</section>
 				<section id='projects' className='items-center bg-black'>
 					<h2 className='text-center'>{t('nav.projects')}</h2>
-					<div className='relative flex flex-wrap justify-center gap-4 w-full'>
-						<div style={{ background: 'radial-gradient(closest-side, oklch(from var(--accent) l c h / .5), transparent)' }} className='absolute h-full aspect-square scale-150'></div>
-						{Object.entries(projects).map(([projectName, project], idx) => (
-							<ProjectCard key={idx} title={projectName} description={t(`projects.${project.translationAlias}.description`)} tags={project.tags} link={project.link} images={project.images} />
-						))}
-					</div>
+					<ProjectMenu />
 				</section>
 				<section id='contact' className='items-center bg-black layout-col-8'>
 					<div className='layout-col-0'>

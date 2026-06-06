@@ -88,14 +88,24 @@ export default function Home() {
 						<OtherHobbies />
 					</div>
 				</section>
-				<section id='skills' className='items-center'>
+				<section id='skills' className='items-center bg-black'>
+					<div className='bottom-full left-0 absolute w-1/2'>
+						<svg viewBox='0 0 250 250' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'>
+							<polygon points='0,250 250,250 0,225' fill='#121113' stroke-width='4' />
+						</svg>
+					</div>
+					<div className='right-0 bottom-full absolute w-1/2'>
+						<svg viewBox='0 0 250 250' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'>
+							<polygon points='0,250 250,250 250,225' fill='#121113' stroke-width='4' />
+						</svg>
+					</div>
 					<h2 className='text-center'>{t('nav.skills')}</h2>
-					<div className='flex flex-col gap-8'>
-						<div className='items-center gap-4 grid lg:grid-cols-[8rem_1fr] px-4 py-2'>
-							<h4 style={{ textDecoration: 'underline 4px var(--accent)' }} className='max-lg:pt-2 max-lg:text-center'>
+					<div className='gap-8 grid grid-flow-col auto-cols-fr'>
+						<div className='items-center bg-darker px-8 py-4 border border-gray rounded-xl layout-col-4'>
+							<h3 style={{ textDecoration: 'underline 4px var(--accent)' }} className='text-center'>
 								Frontend
-							</h4>
-							<div className='flex flex-wrap max-lg:justify-center gap-4'>
+							</h3>
+							<div className='layout-col-4'>
 								<SkillIcon icon='mdi:react' color='#61DAFB' name='React' level={4} />
 								<SkillIcon icon='mdi:language-typescript' color='#2D79C7' name='TypeScript' level={4} />
 								<SkillIcon icon='mdi:language-html5' color='#E44D26' name='HTML' level={4} />
@@ -104,11 +114,11 @@ export default function Home() {
 								<SkillIcon icon='mdi:tailwind' color='#3EBFF8' name='Tailwind&nbsp;CSS' level={4} />
 							</div>
 						</div>
-						<div className='items-center gap-4 grid lg:grid-cols-[8rem_1fr] px-4 py-2'>
-							<h4 style={{ textDecoration: 'underline 4px var(--accent)' }} className='max-lg:pt-2 max-lg:text-center'>
+						<div className='items-center bg-darker px-8 py-4 border border-gray rounded-xl layout-col-4'>
+							<h3 style={{ textDecoration: 'underline 4px var(--accent)' }} className='text-center'>
 								Backend
-							</h4>
-							<div className='flex flex-wrap max-lg:justify-center gap-4'>
+							</h3>
+							<div className='layout-col-4'>
 								<SkillIcon icon='mdi:nodejs' color='#539E43' name='Node.js' level={3} />
 								<SkillIcon icon='lineicons:mongodb' color='#086E50' name='MongoDB' level={3} />
 								<SkillIcon icon='simple-icons:express' color='#F3E024' name='Express.js' level={2} />
@@ -116,11 +126,11 @@ export default function Home() {
 								<SkillIcon icon='material-symbols:sql' color='#3EBFF8' name='SQL' level={3} />
 							</div>
 						</div>
-						<div className='items-center gap-4 grid lg:grid-cols-[8rem_1fr] px-4 py-2'>
-							<h4 style={{ textDecoration: 'underline 4px var(--accent)' }} className='max-lg:pt-2 max-lg:text-center'>
+						<div className='items-center bg-darker px-8 py-4 border border-gray rounded-xl layout-col-4'>
+							<h3 style={{ textDecoration: 'underline 4px var(--accent)' }} className='text-center'>
 								{t('tools')}
-							</h4>
-							<div className='flex flex-wrap max-lg:justify-center gap-4'>
+							</h3>
+							<div className='layout-col-4'>
 								<SkillIcon icon='mdi:git' color='#F05030' name='Git' level={3} />
 								<SkillIcon icon='devicon:figma' color='#F40' name='Figma' level={4} />
 								<SkillIcon icon='devicon:vscode' color='#F40' name='VS Code' level={4} />
@@ -128,7 +138,7 @@ export default function Home() {
 						</div>
 					</div>
 				</section>
-				<section id='projects' className='items-center'>
+				<section id='projects' className='items-center bg-black'>
 					<h2 className='text-center'>{t('nav.projects')}</h2>
 					<div className='flex flex-wrap justify-center gap-4 w-full'>
 						{Object.entries(projects).map(([projectName, project], idx) => (

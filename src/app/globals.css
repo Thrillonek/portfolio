@@ -64,6 +64,7 @@
 
 	section {
 		display: flex;
+		position: relative;
 		flex-direction: column;
 		row-gap: 1rem;
 		padding: 6rem max(5vw, calc((100vw - 1500px) / 2));

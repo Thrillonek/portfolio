@@ -147,10 +147,9 @@ export default function Home() {
 						<h2 className='text-center'>{t('nav.contact')}</h2>
 						<p className='text-center'>{t('contact.paragraph')}</p>
 					</div>
-					<div className='items-center layout-col-2'>
-						<ContactForm />
-						<EmailField />
-					</div>
+
+					<ContactForm />
+					<EmailField />
 				</section>
 			</main>
 			<footer className='items-center bg-darker shadow-2xl text-white layout-col-0'>

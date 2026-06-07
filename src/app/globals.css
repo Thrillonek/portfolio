@@ -1,9 +1,9 @@
 @import 'tailwindcss';
 
 :root {
-	--black: oklch(0.17 0.0043 308.19);
-	--darker: oklch(0.25 0.006 301.03);
-	--dark: oklch(0.33 0.015 300.71);
+	--black: oklch(0.1 0.0043 308.19);
+	--darker: oklch(0.22 0.006 301.03);
+	--dark: oklch(0.3 0.015 300.71);
 	--gray: oklch(0.45 0.02 285.2);
 	--light-gray: oklch(1 0 300.71 / 0.75);
 	--white: oklch(1 0 300.71 / 0.9);

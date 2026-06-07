@@ -88,24 +88,24 @@ export default function Home() {
 					</div>
 				</section>
 				<section id='skills' className='z-10 items-center bg-darker pt-16!'>
-					<div className='bottom-full left-0 absolute w-1/2 pointer-events-none'>
+					<div style={{ color: 'var(--darker)' }} className='bottom-full left-0 absolute w-1/2 pointer-events-none'>
 						<svg viewBox='0 0 250 250' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'>
-							<polygon points='0,250 250,250 0,234' fill='oklch(0.25 0.006 301.03)' />
+							<polygon points='0,250 250,250 0,234' fill='currentColor' />
 						</svg>
 					</div>
-					<div className='right-0 bottom-full absolute w-1/2 pointer-events-none'>
+					<div style={{ color: 'var(--darker)' }} className='right-0 bottom-full absolute w-1/2 pointer-events-none'>
 						<svg viewBox='0 0 250 250' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'>
-							<polygon points='0,250 250,250 250,234' fill='oklch(0.25 0.006 301.03)' />
+							<polygon points='0,250 250,250 250,234' fill='currentColor' />
 						</svg>
 					</div>
-					<div className='bottom-0 left-0 absolute w-1/2 pointer-events-none'>
+					<div style={{ color: 'var(--black)' }} className='bottom-0 left-0 absolute w-1/2 pointer-events-none'>
 						<svg viewBox='0 0 250 250' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'>
-							<polygon points='0,250 250,250 0,234' fill='oklch(0.17 0.0043 308.19)' />
+							<polygon points='0,250 250,250 0,234' fill='currentColor' />
 						</svg>
 					</div>
-					<div className='right-0 bottom-0 absolute w-1/2 pointer-events-none'>
+					<div style={{ color: 'var(--black)' }} className='right-0 bottom-0 absolute w-1/2 pointer-events-none'>
 						<svg viewBox='0 0 250 250' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'>
-							<polygon points='0,250 250,250 250,234' fill='oklch(0.17 0.0043 308.19)' />
+							<polygon points='0,250 250,250 250,234' fill='currentColor' />
 						</svg>
 					</div>
 					<h2 className='text-center'>{t('nav.skills')}</h2>

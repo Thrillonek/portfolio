@@ -2,12 +2,10 @@ import ContactForm, { ContactModal } from '@/src/components/ContactForm';
 import EmailField from '@/src/components/EmailField';
 import Navbar from '@/src/components/Navbar';
 import OtherHobbies from '@/src/components/OtherHobbies';
-import { ProjectCard } from '@/src/components/projects/ProjectCard';
 import ProjectMenu from '@/src/components/projects/ProjectMenu';
 import ProjectModal from '@/src/components/projects/ProjectModal';
 import SkillIcon from '@/src/components/SkillIcon';
 import { projects } from '@/src/data/projects';
-import { useAddObserver } from '@/src/hooks/useAddObserver';
 import { Icon } from '@iconify/react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
@@ -25,7 +23,7 @@ export default function Home() {
 			<Navbar />
 			<ContactModal />
 			<main className='flex flex-col flex-1 items-stretch text-white'>
-				<section id='hero' className='justify-center items-center mx-auto pt-40 w-[min(90vw,800px)] layout-col-12'>
+				<section id='hero' className='justify-center items-center mx-auto px-0! pt-40 w-[min(90vw,800px)] layout-col-12'>
 					<div className='items-center layout-col-2'>
 						<h1 className='text-center'>Jindřich Kraina</h1>
 						<div className='bg-accent rounded w-12 h-1' />
@@ -48,7 +46,7 @@ export default function Home() {
 					</div>
 				</section>
 				<section id='about'>
-					<h2>{t('nav.about')}</h2>
+					<h2 className='text-center'>{t('nav.about')}</h2>
 					<div className='gap-8 grid lg:grid-cols-2'>
 						<div className='layout-col-4'>
 							<p>{t('about.description1')}</p>

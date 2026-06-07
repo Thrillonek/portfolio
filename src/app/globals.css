@@ -31,23 +31,18 @@
 		color: var(--color-white);
 		font-weight: 700;
 		line-height: 1.1;
-		--base-margin: 0.5rem;
+		--base-margin: 0.25em;
 		margin-top: var(--base-margin);
 		margin-bottom: calc(var(--base-margin) / 2);
 	}
 
 	h1 {
-		font-size: 4rem;
-	}
-
-	@media (max-width: 768px) {
-		h1 {
-			font-size: 3rem;
-		}
+		font-size: 4.5rem;
+		--base-margin: 0;
 	}
 
 	h2 {
-		font-size: 2.25rem;
+		font-size: 3rem;
 	}
 
 	h3 {
@@ -67,11 +62,20 @@
 		position: relative;
 		flex-direction: column;
 		row-gap: 1rem;
-		padding: 6rem max(5vw, calc((100vw - 1500px) / 2));
+		padding: 6rem max(5vw, calc((100vw - 1350px) / 2));
 	}
 
 	button {
 		cursor: pointer;
+	}
+
+	@media (max-width: 768px) {
+		h1 {
+			font-size: 3rem;
+		}
+		h2 {
+			font-size: 2.25rem;
+		}
 	}
 }
 

@@ -15,8 +15,7 @@ export default function ProjectMenu() {
 	const isProjectMenuIntersecting = useAddObserver(projectMenuRef, false, 0.5);
 
 	return (
-		<div ref={projectMenuRef} className={clsx('relative flex flex-wrap justify-center gap-4 w-full transition-all duration-750', !isProjectMenuIntersecting && 'opacity-0 scale-90')}>
-			<div style={{ background: 'radial-gradient(closest-side, oklch(from var(--accent) l c h / .5), transparent)' }} className={clsx('absolute h-full aspect-square scale-150 transition-opacity duration-750 delay-500', !isProjectMenuIntersecting && 'opacity-0')} />
+		<div ref={projectMenuRef} className={clsx('relative flex flex-wrap justify-center items-center gap-4 w-full overflow-hidden transition-all duration-750', !isProjectMenuIntersecting && 'opacity-0 scale-90')}>
 			{Object.entries(projects).map(([projectName, project], idx) => (
 				<ProjectCard key={idx} title={projectName} description={t(`projects.${project.translationAlias}.description`)} tags={project.tags} link={project.link} images={project.images} />
 			))}

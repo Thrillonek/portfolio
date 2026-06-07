@@ -49,7 +49,10 @@
 			"details": "Když se dozvím o nějaké zajímavé dovednosti a mám trochu času, zkusím se ji naučit. Občas je to na dlouho, jindy to zabere chvilku. Celkem to závisí na tom, jestli se o to zajímají i lidi kolem mě a taky na obtížnosti dané dovednosti."
 		}
 	},
-	"tools": "Nástroje",
+	"skills": {
+		"tools": "Nástroje",
+		"skillLevels": ["Začátečník", "Středně pokročilý", "Pokročilý", "Expert"]
+	},
 	"projects": {
 		"poznavacka": {
 			"title": "Poznávačka Tool",

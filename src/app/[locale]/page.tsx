@@ -109,12 +109,12 @@ export default function Home() {
 						</svg>
 					</div>
 					<h2 className='text-center'>{t('nav.skills')}</h2>
-					<div className='gap-8 grid md:grid-flow-col auto-cols-fr'>
-						<div className='items-center bg-darker shadow-xl px-8 py-4 border border-gray rounded-xl xl layout-col-4'>
+					<div className='flex flex-wrap gap-8 auto-cols-fr'>
+						<div className='items-center bg-darker shadow-xl px-8 py-4 border border-gray rounded-xl w-64 layout-col-4'>
 							<h3 style={{ textDecoration: 'underline 4px var(--accent)' }} className='text-center'>
 								Frontend
 							</h3>
-							<div className='layout-col-4'>
+							<div className='w-full layout-col-4'>
 								<SkillIcon icon='mdi:react' color='#61DAFB' name='React' level={4} />
 								<SkillIcon icon='mdi:language-typescript' color='#2D79C7' name='TypeScript' level={4} />
 								<SkillIcon icon='mdi:language-html5' color='#E44D26' name='HTML' level={4} />
@@ -123,11 +123,11 @@ export default function Home() {
 								<SkillIcon icon='mdi:tailwind' color='#3EBFF8' name='Tailwind&nbsp;CSS' level={4} />
 							</div>
 						</div>
-						<div className='items-center bg-darker shadow-xl px-8 py-4 border border-gray rounded-xl layout-col-4'>
+						<div className='items-center bg-darker shadow-xl px-8 py-4 border border-gray rounded-xl w-64 layout-col-4'>
 							<h3 style={{ textDecoration: 'underline 4px var(--accent)' }} className='text-center'>
 								Backend
 							</h3>
-							<div className='layout-col-4'>
+							<div className='w-full layout-col-4'>
 								<SkillIcon icon='mdi:nodejs' color='#539E43' name='Node.js' level={3} />
 								<SkillIcon icon='lineicons:mongodb' color='#086E50' name='MongoDB' level={3} />
 								<SkillIcon icon='simple-icons:express' color='#F3E024' name='Express.js' level={2} />
@@ -135,11 +135,11 @@ export default function Home() {
 								<SkillIcon icon='material-symbols:sql' color='#3EBFF8' name='SQL' level={3} />
 							</div>
 						</div>
-						<div className='items-center bg-darker shadow-xl px-8 py-4 border border-gray rounded-xl layout-col-4'>
+						<div className='items-center bg-darker shadow-xl px-8 py-4 border border-gray rounded-xl w-64 layout-col-4'>
 							<h3 style={{ textDecoration: 'underline 4px var(--accent)' }} className='text-center'>
-								{t('tools')}
+								{t('skills.tools')}
 							</h3>
-							<div className='layout-col-4'>
+							<div className='w-full layout-col-4'>
 								<SkillIcon icon='mdi:git' color='#F05030' name='Git' level={3} />
 								<SkillIcon icon='devicon:figma' color='#F40' name='Figma' level={4} />
 								<SkillIcon icon='devicon:vscode' color='#F40' name='VS Code' level={4} />

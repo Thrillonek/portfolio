@@ -49,7 +49,10 @@
 			"details": "When I see some cool skill and I got some time, I try to learn it. Some last longer, some shorter. I guess that depends on the interest of the people around me and the difficulty of said skill."
 		}
 	},
-	"tools": "Tools",
+	"skills": {
+		"tools": "Tools",
+		"skillLevels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+	},
 	"projects": {
 		"poznavacka": {
 			"title": "Poznávačka Tool",

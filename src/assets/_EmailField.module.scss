@@ -26,6 +26,7 @@
 		border: 1px solid var(--gray);
 		border-radius: 0.5rem;
 		opacity: 0;
+		width: max-content;
 
 		transition: opacity 0.1s ease;
 	}

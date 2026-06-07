@@ -13,8 +13,8 @@
 		"secondaryCTA": "My projects"
 	},
 	"about": {
-		"description1": "I’m a self-taught web developer and designer, currently studying at Gymnázium Komenského Havířov. In the future, I want to go to VŠB College in Ostrava to study IT. I enjoy solving problems and learning things I find interesting (not only IT and math).",
-		"description2": "I started as a developer, but had to learn design along the way because my projects looked crappy. I also learned the hard way that I need to organize my stuff. Because otherwise, I would spend a lot of time just figuring out what’s happening in the codebase. And in design, I found out UX should always come in the first place. Sure, you can get creative, but there are rules you cannot bend. That's because users are just used to something and will bounce once they get confused.",
+		"description1": "I’m a web developer and designer, currently studying at Gymnázium Komenského Havířov. Next year, I want to study at VŠB College in Ostrava, IT specialization. I enjoy solving problems and learning things I find interesting (not only IT and math).",
+		"description2": "I started as a developer, but over time, graphic design was inevitable due to the looks of my projects. Another great chapter for me was organisation. That's because I would often spend many minutes searching my code for a component, a function, etc. And in design, I found out that if a person gets confused by the page, it doesn't matter if it's beautiful: confusion = leave. In UX design, there are simply rules you must follow and only then, creativity can take over.",
 		"yearsOfExperience": "Years of experience",
 		"largeProjects": "Large projects",
 		"lang1": {

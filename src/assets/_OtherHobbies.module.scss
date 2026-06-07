@@ -4,7 +4,7 @@
 		right: calc(100% + 1rem);
 		top: 50%;
 		transform: translateY(-50%);
-		background-color: var(--dark);
+		background-color: var(--darker);
 		padding: 1rem;
 		border-radius: 1rem;
 		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -24,7 +24,7 @@
 			top: 50%;
 			transform: translateY(-50%);
 			border: 0.5rem solid transparent;
-			border-left: 0.5rem solid var(--dark);
+			border-left: 0.5rem solid var(--darker);
 		}
 	}
 	@media not all and (min-width: 768px) {

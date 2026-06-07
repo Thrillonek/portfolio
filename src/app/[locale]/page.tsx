@@ -25,7 +25,6 @@ export default function Home() {
 			<Navbar />
 			<ContactModal />
 			<main className='flex flex-col flex-1 items-stretch text-white'>
-				<div className='texture-bg'></div>
 				<section id='hero' className='justify-center items-center mx-auto pt-40 w-[min(90vw,800px)] layout-col-12'>
 					<div className='items-center layout-col-2'>
 						<h1 className='text-center'>Jindřich Kraina</h1>
@@ -88,20 +87,30 @@ export default function Home() {
 						<OtherHobbies />
 					</div>
 				</section>
-				<section id='skills' className='items-center bg-black'>
-					<div className='bottom-full left-0 absolute w-1/2'>
+				<section id='skills' className='z-10 items-center bg-darker pt-16!'>
+					<div className='bottom-full left-0 absolute w-1/2 pointer-events-none'>
 						<svg viewBox='0 0 250 250' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'>
-							<polygon points='0,250 250,250 0,225' fill='#121113' strokeWidth='4' />
+							<polygon points='0,250 250,250 0,234' fill='oklch(0.25 0.006 301.03)' />
 						</svg>
 					</div>
-					<div className='right-0 bottom-full absolute w-1/2'>
+					<div className='right-0 bottom-full absolute w-1/2 pointer-events-none'>
 						<svg viewBox='0 0 250 250' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'>
-							<polygon points='0,250 250,250 250,225' fill='#121113' strokeWidth='4' />
+							<polygon points='0,250 250,250 250,234' fill='oklch(0.25 0.006 301.03)' />
+						</svg>
+					</div>
+					<div className='bottom-0 left-0 absolute w-1/2 pointer-events-none'>
+						<svg viewBox='0 0 250 250' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'>
+							<polygon points='0,250 250,250 0,234' fill='oklch(0.17 0.0043 308.19)' />
+						</svg>
+					</div>
+					<div className='right-0 bottom-0 absolute w-1/2 pointer-events-none'>
+						<svg viewBox='0 0 250 250' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'>
+							<polygon points='0,250 250,250 250,234' fill='oklch(0.17 0.0043 308.19)' />
 						</svg>
 					</div>
 					<h2 className='text-center'>{t('nav.skills')}</h2>
 					<div className='gap-8 grid md:grid-flow-col auto-cols-fr'>
-						<div className='items-center bg-darker px-8 py-4 border border-gray rounded-xl layout-col-4'>
+						<div className='items-center bg-darker shadow-xl px-8 py-4 border border-gray rounded-xl xl layout-col-4'>
 							<h3 style={{ textDecoration: 'underline 4px var(--accent)' }} className='text-center'>
 								Frontend
 							</h3>
@@ -114,7 +123,7 @@ export default function Home() {
 								<SkillIcon icon='mdi:tailwind' color='#3EBFF8' name='Tailwind&nbsp;CSS' level={4} />
 							</div>
 						</div>
-						<div className='items-center bg-darker px-8 py-4 border border-gray rounded-xl layout-col-4'>
+						<div className='items-center bg-darker shadow-xl px-8 py-4 border border-gray rounded-xl layout-col-4'>
 							<h3 style={{ textDecoration: 'underline 4px var(--accent)' }} className='text-center'>
 								Backend
 							</h3>
@@ -126,7 +135,7 @@ export default function Home() {
 								<SkillIcon icon='material-symbols:sql' color='#3EBFF8' name='SQL' level={3} />
 							</div>
 						</div>
-						<div className='items-center bg-darker px-8 py-4 border border-gray rounded-xl layout-col-4'>
+						<div className='items-center bg-darker shadow-xl px-8 py-4 border border-gray rounded-xl layout-col-4'>
 							<h3 style={{ textDecoration: 'underline 4px var(--accent)' }} className='text-center'>
 								{t('tools')}
 							</h3>
@@ -138,7 +147,7 @@ export default function Home() {
 						</div>
 					</div>
 				</section>
-				<section id='projects' className='items-center bg-black'>
+				<section id='projects' className='z-0 items-center bg-black'>
 					<h2 className='text-center'>{t('nav.projects')}</h2>
 					<ProjectMenu />
 				</section>

@@ -12,7 +12,7 @@ div:has(textarea) {
 		pointer-events: none;
 		left: calc(var(--padding) * 1.5 + 2px);
 		top: calc(var(--padding) + 2px + 4px); // 2px is border width, 4px is line height difference
-		color: oklch(from var(--light-gray) calc(l - 0.3) c h);
+		color: oklch(from var(--light-gray) calc(l - 0.2) c h);
 		line-height: 1;
 
 		transition-property: color, transform, top, font-size, padding, background-color;

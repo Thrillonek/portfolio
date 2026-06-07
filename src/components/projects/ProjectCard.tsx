@@ -16,15 +16,15 @@ export function ProjectCard({ title, description, images, tags, link }: ProjectC
 	const t = useTranslations();
 
 	return (
-		<div style={{ zIndex: '1' }} className='bg-darker p-4 border border-gray rounded-lg w-md max-w-full layout-col-4'>
+		<div style={{ zIndex: '1' }} className='bg-darker shadow-lg/75 p-4 border border-gray rounded-lg w-md max-w-full layout-col-4'>
 			<Image src={images[0]} alt={`${t('projects.altImage')} ${title}`} className='rounded-lg w-full h-auto object-contain shrink-0' />
 			<div className='layout-col-1'>
 				<h4>{title}</h4>
 				<p>{description}</p>
 			</div>
-			<div className='flex gap-1'>
+			<div className='flex flex-wrap gap-x-1 gap-y-2 w-full'>
 				{tags.map((tag) => (
-					<span key={tag} className='bg-dark shadow px-2 py-1 rounded-full text-light-gray text-xs'>
+					<span key={tag} className='bg-dark shadow/75 px-2 py-1 rounded-full text-light-gray text-xs shrink-0'>
 						{tag}
 					</span>
 				))}

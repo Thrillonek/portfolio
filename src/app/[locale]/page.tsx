@@ -107,8 +107,8 @@ export default function Home() {
 						</svg>
 					</div>
 					<h2 className='text-center'>{t('nav.skills')}</h2>
-					<div className='flex flex-wrap gap-8 auto-cols-fr'>
-						<div className='items-center bg-darker shadow-xl px-8 py-4 border border-gray rounded-xl w-64 layout-col-4'>
+					<div className='flex flex-wrap justify-center gap-8 auto-cols-fr'>
+						<div className='items-center bg-darker shadow-lg/75 px-8 py-4 border border-gray rounded-xl w-64 layout-col-4'>
 							<h3 style={{ textDecoration: 'underline 4px var(--accent)' }} className='text-center'>
 								Frontend
 							</h3>
@@ -121,7 +121,7 @@ export default function Home() {
 								<SkillIcon icon='mdi:tailwind' color='#3EBFF8' name='Tailwind&nbsp;CSS' level={4} />
 							</div>
 						</div>
-						<div className='items-center bg-darker shadow-xl px-8 py-4 border border-gray rounded-xl w-64 layout-col-4'>
+						<div className='items-center bg-darker shadow-lg/75 px-8 py-4 border border-gray rounded-xl w-64 layout-col-4'>
 							<h3 style={{ textDecoration: 'underline 4px var(--accent)' }} className='text-center'>
 								Backend
 							</h3>
@@ -133,7 +133,7 @@ export default function Home() {
 								<SkillIcon icon='material-symbols:sql' color='#3EBFF8' name='SQL' level={3} />
 							</div>
 						</div>
-						<div className='items-center bg-darker shadow-xl px-8 py-4 border border-gray rounded-xl w-64 layout-col-4'>
+						<div className='items-center bg-darker shadow-lg/75 px-8 py-4 border border-gray rounded-xl w-64 layout-col-4'>
 							<h3 style={{ textDecoration: 'underline 4px var(--accent)' }} className='text-center'>
 								{t('skills.tools')}
 							</h3>

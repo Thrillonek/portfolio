@@ -39,7 +39,7 @@ export default function ProjectModal({ name }: { name: keyof typeof projects }) 
 					<p>{t(`projects.${translationProjectNames[name]}.what`)}</p>
 					<div className='flex flex-wrap gap-1'>
 						{projects[name].tags.map((tag) => (
-							<span key={tag} className='bg-dark shadow px-2 py-1 rounded-full text-light-gray text-xs'>
+							<span key={tag} className='bg-dark shadow px-2 py-1 rounded-full text-light-gray text-xs shrink-0'>
 								{tag}
 							</span>
 						))}

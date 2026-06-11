@@ -45,45 +45,43 @@ export default function Home() {
 						</Link>
 					</div>
 				</section>
-				<section id='about'>
-					<h2 className='text-center'>{t('nav.about')}</h2>
-					<div className='gap-8 grid lg:grid-cols-2'>
-						<div className='layout-col-4'>
-							<p>{t('about.description1')}</p>
-							<p>{t('about.description2')}</p>
-							<div className='flex gap-2'>
-								<div className='p-4 rounded-2xl bg-accent-muted layout-col-2'>
-									<h3 className='m-0 text-accent'>3+</h3>
-									<p>{t('about.yearsOfExperience')}</p>
+				<section id='about' className='gap-8 grid lg:grid-cols-2'>
+					<div className='layout-col-4'>
+						<h2>{t('nav.about')}</h2>
+						<p>{t('about.description1')}</p>
+						<p>{t('about.description2')}</p>
+						<div className='flex gap-2'>
+							<div className='p-4 rounded-2xl bg-accent-muted layout-col-2'>
+								<h3 className='m-0 text-accent'>3+</h3>
+								<p>{t('about.yearsOfExperience')}</p>
+							</div>
+							<div className='p-4 rounded-2xl bg-accent-muted layout-col-2'>
+								<h3 className='m-0 text-accent'>2</h3>
+								<p>{t('about.largeProjects')}</p>
+							</div>
+						</div>
+						<div className='flex'>
+							<div className='flex items-center gap-2 p-2'>
+								<div className='place-items-center grid rounded-lg h-8 aspect-square bg-accent-muted'>
+									<span className='font-bold text-accent'>C2</span>
 								</div>
-								<div className='p-4 rounded-2xl bg-accent-muted layout-col-2'>
-									<h3 className='m-0 text-accent'>2</h3>
-									<p>{t('about.largeProjects')}</p>
+								<div className='layout-col-0'>
+									<p className='font-bold text-white'>{t('about.lang1.name')}</p>
+									<p className='text-xs'>{t('about.lang1.level')}</p>
 								</div>
 							</div>
-							<div className='flex'>
-								<div className='flex items-center gap-2 p-2'>
-									<div className='place-items-center grid rounded-lg h-8 aspect-square bg-accent-muted'>
-										<span className='font-bold text-accent'>C2</span>
-									</div>
-									<div className='layout-col-0'>
-										<p className='font-bold text-white'>{t('about.lang1.name')}</p>
-										<p className='text-xs'>{t('about.lang1.level')}</p>
-									</div>
+							<div className='flex items-center gap-2 p-2'>
+								<div className='place-items-center grid rounded-lg h-8 aspect-square bg-accent-muted'>
+									<span className='font-bold text-accent'>C1</span>
 								</div>
-								<div className='flex items-center gap-2 p-2'>
-									<div className='place-items-center grid rounded-lg h-8 aspect-square bg-accent-muted'>
-										<span className='font-bold text-accent'>C1</span>
-									</div>
-									<div className='layout-col-0'>
-										<p className='font-bold text-white'>{t('about.lang2.name')}</p>
-										<p className='text-xs'>{t('about.lang2.level')}</p>
-									</div>
+								<div className='layout-col-0'>
+									<p className='font-bold text-white'>{t('about.lang2.name')}</p>
+									<p className='text-xs'>{t('about.lang2.level')}</p>
 								</div>
 							</div>
 						</div>
-						<OtherHobbies />
 					</div>
+					<OtherHobbies />
 				</section>
 				<section id='skills' className='z-10 items-center bg-darker pt-16!'>
 					<div style={{ color: 'var(--darker)' }} className='bottom-full left-0 absolute w-1/2 pointer-events-none'>

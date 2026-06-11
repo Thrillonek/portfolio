@@ -56,7 +56,7 @@ export default function OtherHobbies() {
 					<HobbyInfo activeHobby={hobby} />
 				</Modal>
 			))}
-			<div className='gap-4 grid 2xl:grid-cols-2 hobby-list'>
+			<div className='gap-4 grid hobby-list'>
 				<HobbyCard name='Calisthenics' title={t('otherHobbies.Calisthenics.title')} description={t('otherHobbies.Calisthenics.description')} icon={hobbyIcons.Calisthenics} />
 				<HobbyCard name='Math' title={t('otherHobbies.Math.title')} description={t('otherHobbies.Math.description')} icon={hobbyIcons.Math} />
 				<HobbyCard name='Music' title={t('otherHobbies.Music.title')} description={t('otherHobbies.Music.description')} icon={hobbyIcons.Music} />

@@ -2,6 +2,7 @@
 
 import { useAddEventListener } from '@/src/hooks/useAddEventListener';
 import { Icon } from '@iconify/react';
+import clsx from 'clsx';
 import { useTranslations } from 'next-intl';
 import Image, { StaticImageData } from 'next/image';
 import { useEffect, useRef, useState, type MouseEvent, type PointerEvent } from 'react';
@@ -75,18 +76,25 @@ export default function Carousel({ images }: { images: StaticImageData[] }) {
 	});
 
 	return (
-		<div onPointerDown={(e: PointerEvent) => (startParamsRef.current = { pos: e.clientX, time: Date.now() })} className='relative flex items-center rounded-lg w-full h-full overflow-hidden cursor-grab active:cursor-grabbing select-none'>
-			<button onClick={(e) => changeImage('left', e)} className='left-2 z-10 absolute bg-neutral-700/50 hover:bg-neutral-700/75 p-1 rounded-full transition-colors'>
-				<Icon icon='mdi:chevron-left' className='text-3xl' />
-			</button>
-			<button onClick={(e) => changeImage('right', e)} className='right-2 z-10 absolute bg-neutral-700/50 hover:bg-neutral-700/75 p-1 rounded-full transition-colors'>
-				<Icon icon='mdi:chevron-right' className='text-3xl' />
-			</button>
-			<div ref={carouselRef} style={{ aspectRatio: `${images[0].width} / ${images[0].height}` }} className='relative flex gap-2 w-full touch-none'>
-				{Array.from({ length: 3 }, (_, idx) => idx - 1).map((idx) => {
-					const image = images[(currentIndex + idx + images.length) % images.length];
-					return <Image style={{ left: `${idx * 100}%` }} key={idx} className='absolute inset-0 rounded-lg object-cover pointer-events-none' src={image} alt={t('projects.altImage')} />;
-				})}
+		<div className='flex flex-col items-center gap-4'>
+			<div onPointerDown={(e: PointerEvent) => (startParamsRef.current = { pos: e.clientX, time: Date.now() })} className='relative flex items-center rounded-lg w-full h-full overflow-hidden cursor-grab active:cursor-grabbing select-none'>
+				<button onClick={(e) => changeImage('left', e)} className='left-2 z-10 absolute bg-neutral-700/50 hover:bg-neutral-700/75 p-1 rounded-full transition-colors'>
+					<Icon icon='mdi:chevron-left' className='text-3xl' />
+				</button>
+				<button onClick={(e) => changeImage('right', e)} className='right-2 z-10 absolute bg-neutral-700/50 hover:bg-neutral-700/75 p-1 rounded-full transition-colors'>
+					<Icon icon='mdi:chevron-right' className='text-3xl' />
+				</button>
+				<div ref={carouselRef} style={{ aspectRatio: `${images[0].width} / ${images[0].height}` }} className='relative flex gap-2 w-full touch-none'>
+					{Array.from({ length: 3 }, (_, idx) => idx - 1).map((idx) => {
+						const image = images[(currentIndex + idx + images.length) % images.length];
+						return <Image style={{ left: `${idx * 100}%` }} key={idx} className='absolute inset-0 rounded-lg object-cover pointer-events-none' src={image} alt={t('projects.altImage')} />;
+					})}
+				</div>
+			</div>
+			<div className='flex gap-4'>
+				{Array.from({ length: images.length }, (_, i) => i).map((idx) => (
+					<button onClick={() => setCurrentIndex(idx)} className={clsx('bg-gray rounded-full h-4 aspect-square hover:scale-125 transition-transform', currentIndex === idx && 'scale-150')}></button>
+				))}
 			</div>
 		</div>
 	);

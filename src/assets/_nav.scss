@@ -8,7 +8,7 @@ nav {
 	padding: 0.5rem 1.5rem;
 	border-radius: 1rem;
 	border: 1px solid var(--gray);
-	background-color: oklch(from var(--darker) l c h / 0.9);
+	background-color: var(--darker);
 	z-index: 1001;
 
 	& a {

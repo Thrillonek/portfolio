@@ -76,6 +76,7 @@
 	},
 	"contact": {
 		"paragraph": "Máte zájem o spolupráci? Vyplňte tento formulář a já se k Vám dostanu hned, jak to bude možné. Nebo mi taky můžete napsat email.",
+		"formTitle": "Pošlete mi zprávu",
 		"name": "Jméno",
 		"email": "Email",
 		"message": "Vaše zpráva (nepovinné)",

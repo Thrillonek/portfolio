@@ -76,6 +76,7 @@
 	},
 	"contact": {
 		"paragraph": "Want to work with me? Just fill out this form and I'll get back to you as soon as possible. Or you can write me an email.",
+		"formTitle": "Send me a message",
 		"name": "Name",
 		"email": "Email",
 		"message": "Your message (optional)",

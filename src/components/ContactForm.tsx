@@ -15,7 +15,8 @@ export default function ContactForm() {
 
 	return (
 		<>
-			<form onSubmit={(e) => sendEmail(e, { name, email, message })} className='items-center bg-darker shadow-xl p-8 rounded-2xl w-[min(480px,100%)] layout-col-4'>
+			<form onSubmit={(e) => sendEmail(e, { name, email, message })} className='items-stretch bg-darker shadow-xl p-8 rounded-2xl w-[min(480px,100%)] layout-col-4'>
+				<h4 className='text-start'>{t('contact.formTitle')}</h4>
 				<div>
 					<input required onChange={(e) => setName(e.target.value)} type='text' placeholder=' ' id='name' />
 					<label htmlFor='name'>{t('contact.name')}</label>

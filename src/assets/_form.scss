@@ -11,8 +11,8 @@ div:has(textarea) {
 		position: absolute;
 		pointer-events: none;
 		left: calc(var(--padding) * 1.5 + 2px);
-		top: calc(var(--padding) + 2px + 4px); // 2px is border width, 4px is line height difference
-		color: oklch(from var(--light-gray) calc(l - 0.2) c h);
+		top: calc(var(--padding) + 1px + 4px); // 1px is border width, 4px is line height difference (halfed)
+		color: oklch(from var(--light-gray) calc(l - 0.25) c h);
 		line-height: 1;
 
 		transition-property: color, transform, top, font-size, padding, background-color;
@@ -24,7 +24,7 @@ div:has(textarea) {
 	& > textarea {
 		flex: 1;
 		padding: var(--padding) calc(var(--padding) * 1.5);
-		background-color: var(--dark);
+		background-color: var(--darker);
 		border: 1px solid var(--gray);
 		border-radius: 0.5rem;
 		color: var(--white);
@@ -50,12 +50,10 @@ div:has(textarea) {
 
 		&:not(&:placeholder-shown) {
 			border-color: var(--gray);
-			border-width: 2px;
 		}
 
 		&:focus {
 			border-color: var(--accent) !important;
-			border-width: 2px;
 
 			& + label {
 				color: var(--accent);

@@ -30,11 +30,11 @@ export default async function RootLayout({
 	}
 
 	return (
-		<html lang='en' className={`${inter.className} h-lvh antialiased scroll-smooth scroll-pt-8`}>
+		<html lang='en' className={`${inter.className} h-full antialiased scroll-smooth scroll-pt-8`}>
 			<head>
 				<meta name='google-site-verification' content='ryTwTvhX56Sv1aNbiOtR0sa_YI7uuC09iqx8-MXZn48' />
 			</head>
-			<body className='flex flex-col min-h-full'>
+			<body className='flex flex-col min-h-screen'>
 				<NextIntlClientProvider>{children}</NextIntlClientProvider>
 			</body>
 		</html>

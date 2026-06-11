@@ -34,7 +34,7 @@ export default async function RootLayout({
 			<head>
 				<meta name='google-site-verification' content='ryTwTvhX56Sv1aNbiOtR0sa_YI7uuC09iqx8-MXZn48' />
 			</head>
-			<body className='flex flex-col min-h-lvh'>
+			<body className='flex flex-col min-h-full'>
 				<NextIntlClientProvider>{children}</NextIntlClientProvider>
 			</body>
 		</html>

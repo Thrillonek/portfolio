@@ -5,7 +5,6 @@ import { routing } from '@/src/i18n/routing';
 import type { Metadata } from 'next';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { Inter } from 'next/font/google';
-import Head from 'next/head';
 import { notFound } from 'next/navigation';
 import '../globals.css';
 
@@ -31,10 +30,10 @@ export default async function RootLayout({
 	}
 
 	return (
-		<html lang='en' className={`${inter.className} h-lvh antialiased scroll-smooth scroll-pt-8`}>
-			<Head>
+		<html lang='en' className={`${inter.className} h-full antialiased scroll-smooth scroll-pt-8`}>
+			<head>
 				<meta name='google-site-verification' content='ryTwTvhX56Sv1aNbiOtR0sa_YI7uuC09iqx8-MXZn48' />
-			</Head>
+			</head>
 			<body className='flex flex-col min-h-full'>
 				<NextIntlClientProvider>{children}</NextIntlClientProvider>
 			</body>

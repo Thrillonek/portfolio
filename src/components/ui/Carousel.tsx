@@ -93,7 +93,7 @@ export default function Carousel({ images }: { images: StaticImageData[] }) {
 			</div>
 			<div className='flex gap-3'>
 				{Array.from({ length: images.length }, (_, i) => i).map((idx) => (
-					<button onClick={() => setCurrentIndex(idx)} className={clsx('bg-neutral-600 rounded-full h-3 aspect-square transition-transform', currentIndex === idx ? 'scale-150' : 'hover:scale-125')}></button>
+					<button key={idx} onClick={() => setCurrentIndex(idx)} className={clsx('bg-neutral-600 rounded-full h-3 aspect-square transition-transform', currentIndex === idx ? 'scale-150' : 'hover:scale-125')}></button>
 				))}
 			</div>
 		</div>

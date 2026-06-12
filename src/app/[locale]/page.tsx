@@ -31,10 +31,10 @@ export default function Home() {
 					</div>
 					<div className='items-center layout-col-2'>
 						<p className='text-center'>{t('hero.description')}</p>
-						<p className='flex items-center gap-2'>
+						<div className='flex items-center gap-2 bg-darker px-4 py-2 border border-gray rounded-lg'>
 							<Icon icon='mingcute:location-fill' className='text-accent text-xl' />
 							<span>{t('hero.location')}</span>
-						</p>
+						</div>
 					</div>
 					<div className='flex flex-wrap justify-center gap-4'>
 						<Link className='button' href='#contact'>

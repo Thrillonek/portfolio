@@ -33,8 +33,13 @@
 }
 
 body {
-	background-image: radial-gradient(var(--dark), var(--black));
-	background-attachment: fixed;
-	background-position: center;
 	background-color: var(--black);
+
+	&::before {
+		content: '';
+		z-index: -1;
+		background-image: radial-gradient(var(--darker), var(--black));
+		background-attachment: fixed;
+		inset: 0;
+	}
 }

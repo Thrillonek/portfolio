@@ -13,7 +13,7 @@
 		"secondaryCTA": "Moje projekty"
 	},
 	"about": {
-		"description1": "Jsem webový vývojář a designer, momentálně studující na Gymnáziu Komenského v Havířově. V příším roce chci začít studium na VŠB Ostrava, obor informatika. Baví mě řešit problémy a učit se věci, které mi přijdou zajímavé (nejen IT a matematiku).",
+		"description1": "Jsem webový vývojář a designer momentálně studující na Gymnáziu Komenského v Havířově. V příším roce chci začít studium na VŠB Ostrava, obor informatika. Baví mě řešit problémy a učit se věci, které mi přijdou zajímavé (nejen IT a matematiku).",
 		"description2": "Začal jsem jako vývojář, ale časem byl pro mě kvůli vzhledu projektů nevyhnutelný i grafický design. Další důležitou kapitolou pro mě byla organizace. Často se mi totiž stávalo, že jsem i několik minut hledal ve svém kódu nějaký komponent, funkci, atd. V designu jsem zase zjistil, že pokud se člověk ve stránce nevyzná, je úplně jedno, jak krásná je: zmatení = odchod. V UX designu jsou jednoduše pravidla, která se musí dodržet a pak až může přijít kreativita.",
 		"yearsOfExperience": "Roků zkušeností",
 		"largeProjects": "Velké projekty",
@@ -30,18 +30,18 @@
 		"title": "Další zájmy",
 		"Calisthenics": {
 			"title": "Kalistenika",
-			"description": "Zábavný atletický sport zaměřený na posilování s pomocí vlastní váhy a hrazd či jiných tyčí.",
+			"description": "Zábavný atletický sport zaměřený na posilování s pomocí vlastní váhy a hrazd či jiných pomůcek.",
 			"details": "Toto jsem si zvolil namísto posilovny, protože to můžu dělat doma a zalíbily se mi ty dovednosti, ke kterým se můžu dostat. Občas je pro mě těžké držet se rutiny, přesto ale trénuju konzistentně. "
 		},
 		"Math": {
 			"title": "Matika",
-			"description": "Rád se učím nové koncepty, chodím na soutěže a vyzývám svoje myšlení a znalosti.",
+			"description": "Rád se učím nové koncepty, chodím na soutěže a zkouším řešit těžké úlohy.",
 			"details": "Když vidím nebo slyším něco spojeného s matikou čemu ještě nerozumím, většinou si to najdu. Jsem prostě zvědavý člověk a rád řeším (nejen) matematické úlohy."
 		},
 		"Music": {
 			"title": "Hudba",
-			"description": "Myslím, že tohle má na svém seznamu každý. Já jsem tady hudbu musel přidat i tak, protože ji poslouchám každý den.",
-			"details": "Poslouchám všechno, co má dobrý \"vibe\" a aspoň trochu promyšlený text. Pokud je text opravdu dobrý, poslouchám to delší dobu. Jinak preferuju rap, techno a rock."
+			"description": "Myslím, že hudbu má na svém seznamu každý. Přesto jsem ji sem musel přidat, protože ji poslouchám každý den.",
+			"details": "Poslouchám všechno, co má dobrý \"vibe\" a aspoň trochu promyšlený text. Čím je text lepší, tím písničku poslouchám déle. Jinak preferuju rap, techno a rock."
 		},
 		"Random": {
 			"title": "Náhodné dovednosti",

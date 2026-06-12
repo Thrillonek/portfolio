@@ -22,7 +22,7 @@ export default function Home() {
 			))}
 			<Navbar />
 			<ContactModal />
-			<main className='flex flex-col flex-1 items-stretch text-white'>
+			<main className='flex flex-col flex-1 items-stretch min-h-dvh text-white'>
 				<section id='hero' className='justify-center items-center mx-auto px-0! pt-40 w-[min(90vw,800px)] layout-col-12'>
 					<div className='items-center layout-col-2'>
 						<h1 className='text-center'>Jindřich Kraina</h1>
